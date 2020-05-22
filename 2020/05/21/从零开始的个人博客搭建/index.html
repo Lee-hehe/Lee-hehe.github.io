@@ -88,228 +88,225 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Attack On Mr. Moon</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">从零开始的个人博客搭建</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-05-21</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-05-21</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">2.7k</span></span></div></header><div class="post-body">
-        <h2 id="Hexo博客框架"   >
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/reading/"><span class="header-nav-menu-item__icon"><i class="fas fa-book"></i></span><span class="header-nav-menu-item__text">阅读</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Attack On Mr. Moon</div><div class="header-banner-info__subtitle"></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">从零开始的个人博客搭建</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2020-05-21</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2020-05-21</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">2.7k</span></span></div></header><div class="post-body"><h2 id="Hexo博客框架">
           <a href="#Hexo博客框架" class="heading-link"><i class="fas fa-link"></i></a>Hexo博客框架</h2>
       <a id="more"></a> 
 
-
-        <h2 id="一、如何部署环境"   >
+        <h2 id="一、如何部署环境">
           <a href="#一、如何部署环境" class="heading-link"><i class="fas fa-link"></i></a>一、如何部署环境</h2>
       
-        <h3 id="1-安装Node-js，npm"   >
+        <h3 id="1-安装Node-js，npm">
           <a href="#1-安装Node-js，npm" class="heading-link"><i class="fas fa-link"></i></a>1.安装Node.js，npm</h3>
-      <p>a. 进入<span class="exturl"><a class="exturl__link"   href="https://nodejs.org/en/"  target="_blank" rel="noopener">Node.js</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>官网</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521024235799.png" alt="image-20200521024235799"></p>
+      <p>a. 进入<span class="exturl"><a class="exturl__link" href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>官网</p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521024235799.png" alt="image-20200521024235799"></p>
 <p>下载LTS长期支持版，一直下一步即可。</p>
 <p>安装完成会有两个组件：“Node.js”和“npm包管理器”</p>
 <p>b. 打开cmd（Windows）/iTerm（IOS）（ios需切换到root用户：sudo su）</p>
 <ul>
 <li>查看node版本：<code>node -v</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200520220602552.png" alt="image-20200520220602552"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200520220602552.png" alt="image-20200520220602552"></p>
 <ul>
 <li>查看npm包管理器的版本：<code>npm -v</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200520220659139.png" alt="image-20200520220659139"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200520220659139.png" alt="image-20200520220659139"></p>
 
-        <h3 id="2-安装镜像源cnpm"   >
+        <h3 id="2-安装镜像源cnpm">
           <a href="#2-安装镜像源cnpm" class="heading-link"><i class="fas fa-link"></i></a>2.安装镜像源cnpm</h3>
       <p>安装需要借助npm包管理器来安装，但由于国内镜像源太慢，一般在使用之前利用npm来安装cnpm</p>
 <ul>
 <li>全局安装指向淘宝的镜像源cnpm：<code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></li>
 </ul>
-<img src="C:/Users/Aesop/Desktop/从零开始的个人博客搭建.assets/image-20200520221152783.png" alt="image-20200520221152783"  />
-
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200520221211632.png" alt="image-20200520221211632"></p>
+<p><img src="C:/Users/Aesop/Desktop/从零开始的个人博客搭建.assets/image-20200520221152783.png" alt="image-20200520221152783"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200520221211632.png" alt="image-20200520221211632"></p>
 <ul>
 <li>查看cnpm版本：<code>cnpm -v</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200520221444375.png" alt="image-20200520221444375"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200520221444375.png" alt="image-20200520221444375"></p>
 
-        <h3 id="3-安装hexo博客框架"   >
+        <h3 id="3-安装hexo博客框架">
           <a href="#3-安装hexo博客框架" class="heading-link"><i class="fas fa-link"></i></a>3.安装hexo博客框架</h3>
       <ul>
 <li>用cnpm全局安装hexo博客框架：<code>cnpm install -g hexo-cli</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200520221816046.png" alt="image-20200520221816046"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200520221816046.png" alt="image-20200520221816046"></p>
 <ul>
 <li>查看hexo版本：<code>hexo -v</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200520221923258.png" alt="image-20200520221923258"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200520221923258.png" alt="image-20200520221923258"></p>
 <p>此时hexo就已经安装完了</p>
 
-        <h2 id="二、如何使用hexo搭建博客"   >
+        <h2 id="二、如何使用hexo搭建博客">
           <a href="#二、如何使用hexo搭建博客" class="heading-link"><i class="fas fa-link"></i></a>二、如何使用hexo搭建博客</h2>
       <ul>
 <li>查看当前路径：Windows：<code>chdir</code>，IOS：<code>pwdrhcl</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200520222220388.png" alt="image-20200520222220388"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200520222220388.png" alt="image-20200520222220388"></p>
 
-        <h3 id="1-新建一个文件夹"   >
+        <h3 id="1-新建一个文件夹">
           <a href="#1-新建一个文件夹" class="heading-link"><i class="fas fa-link"></i></a>1.新建一个文件夹</h3>
       <ul>
 <li>新建空的文件夹“blog”：<code>mkdir blog</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200520222522436.png" alt="image-20200520222522436"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200520222522436.png" alt="image-20200520222522436"></p>
 <ul>
 <li>进入“blog”文件夹：<code>cd blog/</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200520222637761.png" alt="image-20200520222637761"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200520222637761.png" alt="image-20200520222637761"></p>
 
-        <h3 id="2-使用hexo生成博客"   >
+        <h3 id="2-使用hexo生成博客">
           <a href="#2-使用hexo生成博客" class="heading-link"><i class="fas fa-link"></i></a>2.使用hexo生成博客</h3>
       <ul>
 <li>使用hexo生成博客：Windows：<code>hexo init</code>，IOS：<code>sudo hexo init</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200520223204578.png" alt="image-20200520223204578"></p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200520223500605.png" alt="image-20200520223500605"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200520223204578.png" alt="image-20200520223204578"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200520223500605.png" alt="image-20200520223500605"></p>
 <p>查看当前目录下的文件：</p>
 <ul>
 <li>Windows：<code>dir</code>，IOS：<code>ls -l</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200520223845687.png" alt="image-20200520223845687"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200520223845687.png" alt="image-20200520223845687"></p>
 <p>这些文件都是Hexo生成的博客框架的基本内容</p>
 <p>此时已经安装完成了，我们来启动博客</p>
 <ul>
 <li>启动博客：<code>hexo s</code></li>
 </ul>
 <p>（<code>hexo s</code>不能用的话先输入<code>npm install hexo-server</code>）</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200520224113074.png" alt="image-20200520224113074"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200520224113074.png" alt="image-20200520224113074"></p>
 <p>提示在本地localhost的4000端口启动</p>
 <ul>
 <li>打开浏览器，访问localhost4000端口：<code>http://localhost:4000</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200520224323294.png" alt="image-20200520224323294"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200520224323294.png" alt="image-20200520224323294"></p>
 <p>可以看到博客已经创建好了，而且默认创建了一篇标题为“Hello World”的文章，里面简介了hexo的使用方法</p>
 
-        <h3 id="3-新建一篇文章后编辑"   >
+        <h3 id="3-新建一篇文章后编辑">
           <a href="#3-新建一篇文章后编辑" class="heading-link"><i class="fas fa-link"></i></a>3.新建一篇文章后编辑</h3>
       <ul>
 <li>先断开掉：<code>Ctrl + c</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200520224647556.png" alt="image-20200520224647556"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200520224647556.png" alt="image-20200520224647556"></p>
 <ul>
-<li>创建一篇文章：<code>hexo n &quot;此处为博客文章名称&quot;</code></li>
+<li>创建一篇文章：<code>hexo n "此处为博客文章名称"</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200520225016166.png" alt="image-20200520225016166"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200520225016166.png" alt="image-20200520225016166"></p>
 <ul>
 <li><p>进入文章所在文件夹：<code>cd source/_posts/</code></p>
 </li>
 <li><p>查看该文件夹下的所有文件：Windows：<code>dir</code>，IOS：<code>ls -l</code></p>
 </li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200520225309827.png" alt="image-20200520225309827"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200520225309827.png" alt="image-20200520225309827"></p>
 <p>可直接用markdown编辑</p>
 <ul>
 <li>IOS也可使用vim编辑文章：<code>vim 文章名称.md</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200520225601270.png" alt="image-20200520225601270"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200520225601270.png" alt="image-20200520225601270"></p>
 <p>基于markdown的格式写</p>
 <ul>
 <li>写完保存退出：<code>esc</code>,<code>wq</code>,<code>回车</code></li>
 </ul>
 
-        <h3 id="4-重新生成再预览"   >
+        <h3 id="4-重新生成再预览">
           <a href="#4-重新生成再预览" class="heading-link"><i class="fas fa-link"></i></a>4.重新生成再预览</h3>
       <ul>
 <li>返回两层回到blog文件夹下：<code>cd ../..</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521005911775.png" alt="image-20200521005911775"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521005911775.png" alt="image-20200521005911775"></p>
 <ul>
 <li>先清理一下：<code>hexo clean</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521010639740.png" alt="image-20200521010639740"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521010639740.png" alt="image-20200521010639740"></p>
 <ul>
 <li>再生成一下：<code>hexo g</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521010710172.png" alt="image-20200521010710172"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521010710172.png" alt="image-20200521010710172"></p>
 <ul>
 <li>启动预览博客：<code>hexo s</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521010744902.png" alt="image-20200521010744902"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521010744902.png" alt="image-20200521010744902"></p>
 <p>重新进入4000端口：</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521011115145.png" alt="image-20200521011115145"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521011115145.png" alt="image-20200521011115145"></p>
 <p>此时博客的搭建已经完成</p>
 
-        <h2 id="三、如何将个人博客部署到远端"   >
+        <h2 id="三、如何将个人博客部署到远端">
           <a href="#三、如何将个人博客部署到远端" class="heading-link"><i class="fas fa-link"></i></a>三、如何将个人博客部署到远端</h2>
       <p>博客搭建完成不可能只在本地用，需要部署到远端去</p>
 <p>这里推荐一个免费的部署方式：通过部署到GitHub的地址来访问博客</p>
 <p>接下来演示如何将博客部署到GitHub上去</p>
-<p>关于GitHub账号的创建可以参考–&gt;xingkaifan：<span class="exturl"><a class="exturl__link"   href="https://blog.csdn.net/xingkaifan/article/details/81105352"  target="_blank" rel="noopener">创建我的GitHub账号及使用</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>关于GitHub账号的创建可以参考—&gt;xingkaifan：<span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/xingkaifan/article/details/81105352" target="_blank" rel="noopener">创建我的GitHub账号及使用</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
 
-        <h3 id="1-在GitHub上新建一个仓库"   >
+        <h3 id="1-在GitHub上新建一个仓库">
           <a href="#1-在GitHub上新建一个仓库" class="heading-link"><i class="fas fa-link"></i></a>1.在GitHub上新建一个仓库</h3>
       <ul>
 <li>首先断开：<code>Ctrl + c</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521011903777.png" alt="image-20200521011903777"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521011903777.png" alt="image-20200521011903777"></p>
 <p>登录自己的GitHub</p>
 <p>然后新建一个仓库</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521012942825.png" alt="image-20200521012942825"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521012942825.png" alt="image-20200521012942825"></p>
 <p>用户部署个人博客的GitHub仓库的命名必须复合特定要求！</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521013814127.png" alt="image-20200521013814127"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521013814127.png" alt="image-20200521013814127"></p>
 <p>1处必须是这个格式：<code>“你的昵称”.github.io</code>，后续在浏览器中输入这个网址就能访问自己的博客</p>
 <p>在2处填写一个描述，例如“我的博客”</p>
 <p>选择3，点击4，即可创建完成</p>
 
-        <h3 id="2-安装Git部署插件"   >
+        <h3 id="2-安装Git部署插件">
           <a href="#2-安装Git部署插件" class="heading-link"><i class="fas fa-link"></i></a>2.安装Git部署插件</h3>
       <ul>
 <li>然后在blog目录下安装Git部署插件：<code>cnpm install --save hexo-deployer-git</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521014311609.png" alt="image-20200521014311609"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521014311609.png" alt="image-20200521014311609"></p>
 
-        <h3 id="3-设置“-config-yml”文件"   >
+        <h3 id="3-设置“-config-yml”文件">
           <a href="#3-设置“-config-yml”文件" class="heading-link"><i class="fas fa-link"></i></a>3.设置“_config.yml”文件</h3>
       <p>安装完成之后需要设置“_config.yml”文件</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521014440549.png" alt="image-20200521014440549"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521014440549.png" alt="image-20200521014440549"></p>
 <p>打开“_config.yml”文件（我这里直接用的IDEA打开的）</p>
 <p>（IOS可以输入<code>vim _config.yml</code>直接修改）</p>
 <p>找到“# Deployment”（一般在最下面），进行一些配置</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521014812725.png" alt="image-20200521014812725"></p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521015838385.png" alt="image-20200521015838385"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521014812725.png" alt="image-20200521014812725"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521015838385.png" alt="image-20200521015838385"></p>
 <p>1：直接在引号中加上“git”</p>
 <p>2：先写“repo：”，然后去刚刚创建好仓库的页面复制网址，粘贴过来</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521015500539.png" alt="image-20200521015500539"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521015500539.png" alt="image-20200521015500539"></p>
 <p>3：先写“branch：”， 然后写“master”</p>
 <p>IDEA直接退出即可    (IOS需要<code>esc</code>，<code>wq</code>，<code>回车</code>)</p>
 
-        <h3 id="4-部署到远端"   >
+        <h3 id="4-部署到远端">
           <a href="#4-部署到远端" class="heading-link"><i class="fas fa-link"></i></a>4.部署到远端</h3>
       <ul>
 <li>接下来部署到远端：<code>hexo d</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521020440585.png" alt="image-20200521020440585"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521020440585.png" alt="image-20200521020440585"></p>
 <p>注意！1处填写自己github的账户，2处填写自己账户的密码    （输入密码的时候不会显示出来！！！）</p>
 <p>当推送成功之后，可以刷新一下仓库，可以看到会出现很多新的文件</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521021017234.png" alt="image-20200521021017234"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521021017234.png" alt="image-20200521021017234"></p>
 <p>这时我们复制这个网址的后面一段（方框内）</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521021131953.png" alt="image-20200521021131953"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521021131953.png" alt="image-20200521021131953"></p>
 <p>然后直接打开复制的网址，此时就已经成功地部署到远端了</p>
 
-        <h2 id="四、如何更换博客主题"   >
+        <h2 id="四、如何更换博客主题">
           <a href="#四、如何更换博客主题" class="heading-link"><i class="fas fa-link"></i></a>四、如何更换博客主题</h2>
       
-        <h3 id="1-下载目标主题"   >
+        <h3 id="1-下载目标主题">
           <a href="#1-下载目标主题" class="heading-link"><i class="fas fa-link"></i></a>1.下载目标主题</h3>
       <p>演示主题的网址：<code>github.com/litten/hexo-theme-yilia</code></p>
 <ul>
 <li>在blog文件夹下克隆目标主题：<code>git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</code></li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521022157899.png" alt="image-20200521022157899"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521022157899.png" alt="image-20200521022157899"></p>
 <p>下载完成之后配到自己的博客里去</p>
 
-        <h3 id="2-修改“-config-yml”文件"   >
+        <h3 id="2-修改“-config-yml”文件">
           <a href="#2-修改“-config-yml”文件" class="heading-link"><i class="fas fa-link"></i></a>2.修改“_config.yml”文件</h3>
       <p>按照刚才的方法打开“_config.yml”文件，找到“theme”</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521022641369.png" alt="image-20200521022641369"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521022641369.png" alt="image-20200521022641369"></p>
 <p>将方框内的名称改为想换的主题的名称</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521022738841.png" alt="image-20200521022738841"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521022738841.png" alt="image-20200521022738841"></p>
 <p>然后保存退出</p>
 
-        <h3 id="3-重新执行“clean，g，s，d”"   >
+        <h3 id="3-重新执行“clean，g，s，d”">
           <a href="#3-重新执行“clean，g，s，d”" class="heading-link"><i class="fas fa-link"></i></a>3.重新执行“clean，g，s，d”</h3>
       <ul>
 <li><p>清除<code>hexo clean</code></p>
@@ -319,7 +316,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <li><p>执行<code>hexo s</code></p>
 </li>
 </ul>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521023044920.png" alt="image-20200521023044920"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521023044920.png" alt="image-20200521023044920"></p>
 <p>此时再刷新4000端口，会发现主题已经切换完毕</p>
 <ul>
 <li><p>然后<code>Ctrl + c</code>退出</p>
@@ -329,110 +326,100 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ul>
 <p>刷新自己的网址（每次更改主题后不会立马生效，需要等一会），刷新成功后主题就已更换完毕！</p>
 
-        <h2 id="五、使用SSH密钥连接GitHub"   >
+        <h2 id="五、使用SSH密钥连接GitHub">
           <a href="#五、使用SSH密钥连接GitHub" class="heading-link"><i class="fas fa-link"></i></a>五、使用SSH密钥连接GitHub</h2>
       <p>下面是使用Git Bush来运行而不是用cmd的方法</p>
 
-        <h3 id="1-下载Git"   >
+        <h3 id="1-下载Git">
           <a href="#1-下载Git" class="heading-link"><i class="fas fa-link"></i></a>1.下载Git</h3>
-      <p>a. 进入<span class="exturl"><a class="exturl__link"   href="https://git-scm.com/"  target="_blank" rel="noopener">Git官网</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521064848430.png" alt="image-20200521064848430"></p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521064944365.png" alt="image-20200521064944365"></p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521065142165.png" alt="image-20200521065142165"></p>
+      <p>a. 进入<span class="exturl"><a class="exturl__link" href="https://git-scm.com/" target="_blank" rel="noopener">Git官网</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521064848430.png" alt="image-20200521064848430"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521064944365.png" alt="image-20200521064944365"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521065142165.png" alt="image-20200521065142165"></p>
 <p>选择自己的电脑型号的位数，点击下载</p>
 <p>b. 按照图示进行安装</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521085746640.png" alt="image-20200521085746640"></p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521085818419.png" alt="image-20200521085818419"></p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521085831376.png" alt="image-20200521085831376"></p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521085843414.png" alt="image-20200521085843414"></p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521085855974.png" alt="image-20200521085855974"></p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521085922141.png" alt="image-20200521085922141"></p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521085934864.png" alt="image-20200521085934864"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521085746640.png" alt="image-20200521085746640"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521085818419.png" alt="image-20200521085818419"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521085831376.png" alt="image-20200521085831376"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521085843414.png" alt="image-20200521085843414"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521085855974.png" alt="image-20200521085855974"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521085922141.png" alt="image-20200521085922141"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521085934864.png" alt="image-20200521085934864"></p>
 <p>c. 安装完成后检验是否安装成功</p>
 <p>回到电脑桌面，鼠标右击，如果看到有两个git单词则安装成功</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521090027751.png" alt="image-20200521090027751"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521090027751.png" alt="image-20200521090027751"></p>
 <p>d. 接下来需要配置Git的一些基本信息</p>
 <p><code>右键点击Git Bash Here</code></p>
 <ul>
-<li>设置用户名：<code>git config --global user.name &#39;你在GitHub上注册的用户名&#39;</code>；</li>
-<li>设置用户邮箱：<code>git config --global user.email &#39;注册时候的邮箱&#39;</code>；</li>
+<li>设置用户名：<code>git config --global user.name '你在GitHub上注册的用户名'</code>；</li>
+<li>设置用户邮箱：<code>git config --global user.email '注册时候的邮箱'</code>；</li>
 <li>配置完成之后，使用<code>git config --list</code>命令看是否配置成功。</li>
 </ul>
 <p>e. 若要完成之前的命令，直接在新建的blog文件夹下，鼠标<code>右键点击Git Bash Here</code>，然后依然按照之前的步骤执行</p>
 
-        <h3 id="2-使用SSH密钥连接GitHub"   >
+        <h3 id="2-使用SSH密钥连接GitHub">
           <a href="#2-使用SSH密钥连接GitHub" class="heading-link"><i class="fas fa-link"></i></a>2.使用SSH密钥连接GitHub</h3>
       <p>使用Github，也许大家觉得比较麻烦的就是在每次push的时候，都需要输入用户名和密码。如果使用SSH，就可以记住用户名，并创建属于自己的密码来保证安全操作，还有神奇的一招可以“不用输入密码”哦。下面将介绍如何创建SSH Keys并将公钥加到GitHub账户中，使用SSH Keys在本机和GitHub之间建立一个安全的连接。</p>
 <p><strong>这里演示Windows环境下生成SSH key且连接GitHub，Mac环境演示可查看最下方链接</strong></p>
 
-        <h4 id="第一步、看看是否存在SSH密钥-keys"   >
+        <h4 id="第一步、看看是否存在SSH密钥-keys">
           <a href="#第一步、看看是否存在SSH密钥-keys" class="heading-link"><i class="fas fa-link"></i></a>第一步、看看是否存在SSH密钥(keys)</h4>
       <p>首先，我们需要看看是否看看本机是否存在SSH keys，打开Git Bash，并运行：</p>
-<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$cd ~&#x2F;.ssh#</span><br></pre></td></tr></table></div></figure>
-
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$cd ~/.ssh#</span><br></pre></td></tr></tbody></table></div></figure>
 <p>检查你本机用户home目录下是否存在.ssh目录</p>
 <p>如果，不存在此目录，则进行第二步操作，否则，你本机已经存在ssh公钥和私钥，可以略过第二步，直接进入第三步操作。</p>
 
-        <h4 id="第二步、创建一对新的SSH密钥-keys"   >
+        <h4 id="第二步、创建一对新的SSH密钥-keys">
           <a href="#第二步、创建一对新的SSH密钥-keys" class="heading-link"><i class="fas fa-link"></i></a>第二步、创建一对新的SSH密钥(keys)</h4>
       <p>输入如下命令：</p>
-<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span><br><span class="line">#这将按照你提供的邮箱地址，创建一对密钥</span><br><span class="line">Generating public&#x2F;private rsa key pair.</span><br><span class="line">Enter file in which to save the key (&#x2F;c&#x2F;Users&#x2F;you&#x2F;.ssh&#x2F;id_rsa): [Press enter]</span><br></pre></td></tr></table></div></figure>
-
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ssh-keygen -t rsa -C "your_email@example.com"</span><br><span class="line">#这将按照你提供的邮箱地址，创建一对密钥</span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): [Press enter]</span><br></pre></td></tr></tbody></table></div></figure>
 <p>直接回车，则将密钥按默认文件进行存储。此时也可以输入特定的文件名，比如/c/Users/you/.ssh/github_rsa</p>
 <p>接着，根据提示，你需要输入密码和确认密码（说到这里，如果你很放心，其实可以不用密码，就是到输密码的地方，都直接回车，所以每次push就只管回车就行了。所谓的最安全的密码，就是没有密码  – –  哈哈）。相关提示如下：</p>
-<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase): [Type a passphrase]</span><br><span class="line">Enter same passphrase again: [Type passphrase again]</span><br></pre></td></tr></table></div></figure>
-
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase): [Type a passphrase]</span><br><span class="line">Enter same passphrase again: [Type passphrase again]</span><br></pre></td></tr></tbody></table></div></figure>
 <p>输入完成之后，屏幕会显示如下信息：</p>
-<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in &#x2F;c&#x2F;Users&#x2F;you&#x2F;.ssh&#x2F;id_rsa.</span><br><span class="line">Your public key has been saved in &#x2F;c&#x2F;Users&#x2F;you&#x2F;.ssh&#x2F;id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in /c/Users/you/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved in /c/Users/you/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com</span><br></pre></td></tr></tbody></table></div></figure>
 
-
-        <h4 id="第三步、在GitHub账户中添加你的公钥"   >
+        <h4 id="第三步、在GitHub账户中添加你的公钥">
           <a href="#第三步、在GitHub账户中添加你的公钥" class="heading-link"><i class="fas fa-link"></i></a>第三步、在GitHub账户中添加你的公钥</h4>
       <p>运行如下命令，将公钥的内容复制到系统粘贴板(clipboard)中。</p>
-<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clip &lt; ~&#x2F;.ssh&#x2F;id_rsa.pub</span><br></pre></td></tr></table></div></figure>
-
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></tbody></table></div></figure>
 <p>接着：</p>
 <p>1.登陆GitHub,进入你的Account Settings</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521204714358.png" alt="image-20200521204714358"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521204714358.png" alt="image-20200521204714358"></p>
 <p>2.在左边菜单，点击”SSH Keys”</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521204758888.png" alt="image-20200521204758888"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521204758888.png" alt="image-20200521204758888"></p>
 <p>3.点击”Add SSH key”按钮</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521204855538.png" alt="image-20200521204855538"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521204855538.png" alt="image-20200521204855538"></p>
 <p>4.粘贴你的密钥到key输入框中</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521204927680.png" alt="image-20200521204927680"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521204927680.png" alt="image-20200521204927680"></p>
 <p>5.点击”Add Key”按钮</p>
-<p><img src="%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.assets/image-20200521205003998.png" alt="image-20200521205003998"></p>
+<p><img src="从零开始的个人博客搭建.assets/image-20200521205003998.png" alt="image-20200521205003998"></p>
 <p>6.再弹出窗口，输入你的GitHub密码，点击确认按钮</p>
 <p>到此，大功告成了！</p>
 
-        <h4 id="第四步、测试"   >
+        <h4 id="第四步、测试">
           <a href="#第四步、测试" class="heading-link"><i class="fas fa-link"></i></a>第四步、测试</h4>
       <p>为了确认我们可以通过SSH连接GitHub，我们输入下面命令。输入后，会要求我们提供验证密码，输入之前创建的密码就ok了。</p>
-<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ssh -T git@github.com</span><br></pre></td></tr></table></div></figure>
-
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ssh -T git@github.com</span><br></pre></td></tr></tbody></table></div></figure>
 <p>你可能会看到告警信息，如下：</p>
-<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host &#39;github.com (207.97.227.239)&#39; can&#39;t be established.</span><br><span class="line">RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</span><br><span class="line">Are you sure you want to continue connecting (yes&#x2F;no)?</span><br></pre></td></tr></table></div></figure>
-
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host 'github.com (207.97.227.239)' can't be established.</span><br><span class="line">RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</span><br><span class="line">Are you sure you want to continue connecting (yes/no)?</span><br></pre></td></tr></tbody></table></div></figure>
 <p>不用担心，直接输入<code>yes</code>。</p>
 <p>如果看到下面信息，就说明一切完美！</p>
 <p><code>Hi username! You’ve successfully authenticated, but GitHub does not provide shell access.</code></p>
 
-        <h3 id="3-单机如何控制不同的SSH-Keys连不同的Git环境"   >
+        <h3 id="3-单机如何控制不同的SSH-Keys连不同的Git环境">
           <a href="#3-单机如何控制不同的SSH-Keys连不同的Git环境" class="heading-link"><i class="fas fa-link"></i></a>3.单机如何控制不同的SSH Keys连不同的Git环境</h3>
       <p>其实，一套SSH密钥是可以用在不同的SSH环境的.</p>
 <p>但是如果由于某种要求，需要用不同的SSH密钥连接不同的Git环境。假设具体场景是，已经建了密钥github_rsa，还需要创建work_rsa连接工作环境git仓库，那么，可以按下面操作进行：</p>
 <p><strong>1. 创建另一对密钥work_rsa.</strong></p>
-<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ssh-keygen -t rsa -C “work@mail.com”</span><br><span class="line">#保存密钥为work_rsa</span><br></pre></td></tr></table></div></figure>
-
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ssh-keygen -t rsa -C “work@mail.com”</span><br><span class="line">#保存密钥为work_rsa</span><br></pre></td></tr></tbody></table></div></figure>
 <p><strong>2. 添加新身份信息</strong></p>
-<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ssh-add ～&#x2F;.ssh&#x2F;work_rsa</span><br></pre></td></tr></table></div></figure>
-
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ssh-add ～/.ssh/work_rsa</span><br></pre></td></tr></tbody></table></div></figure>
 <p><strong>3. 配置.ssh/config</strong></p>
 <p>我们需要通过Host别名，将不同的账号区分开来。</p>
-<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Host me.github.com</span><br><span class="line">HostName github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~&#x2F;.ssh&#x2F;github_rsa</span><br><span class="line"> </span><br><span class="line">Host work.comp.com</span><br><span class="line">HostName comp.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~&#x2F;.ssh&#x2F;work_rsa</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight plain"><div class="table-container"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Host me.github.com</span><br><span class="line">HostName github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/github_rsa</span><br><span class="line"> </span><br><span class="line">Host work.comp.com</span><br><span class="line">HostName comp.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/work_rsa</span><br></pre></td></tr></tbody></table></div></figure>
 
-
-        <h2 id="五、小结"   >
+        <h2 id="五、小结">
           <a href="#五、小结" class="heading-link"><i class="fas fa-link"></i></a>五、小结</h2>
       <p>先来回顾一下过程：</p>
 <p>1.首先是环境准备，安装node.js、git，接下来安装hexo；</p>
@@ -442,13 +429,31 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <p>这里建议先把博客搭建起来，然后再考虑主题、内容、页面美观等其他方面的问题，不要着急，一步步来。</p>
 <p>安装过程中难免会出现错误，这时不要怕，大不了重头再来，人不能缺少重头再来的勇气！</p>
 
-        <h3 id="资料来源："   >
+        <h3 id="资料来源：">
           <a href="#资料来源：" class="heading-link"><i class="fas fa-link"></i></a>资料来源：</h3>
-      <p>CodeSheep：<span class="exturl"><a class="exturl__link"   href="https://www.bilibili.com/video/BV1Yb411a7ty?from=search&seid=9900012627646033790"  target="_blank" rel="noopener">手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<p>xingkaifan：<span class="exturl"><a class="exturl__link"   href="https://blog.csdn.net/xingkaifan/article/details/81105352"  target="_blank" rel="noopener">创建我的GitHub账号及使用</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<p>小君君：<span class="exturl"><a class="exturl__link"   href="https://www.cnblogs.com/qijunjun/p/7137207.html"  target="_blank" rel="noopener">Git安装和使用</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-<p>轩枫阁：<span class="exturl"><a class="exturl__link"   href="http://www.xuanfengge.com/using-ssh-key-link-github-photo-tour.html"  target="_blank" rel="noopener">使用SSH密钥连接Github</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://yoursite.com">Alec</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://yoursite.com/2020/05/21/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">http://yoursite.com/2020/05/21/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-reward reward"><div class="reward-button">请我喝杯咖啡~</div><div class="reward-qrcode"><span class="reward-qrcode-alipay"><img class="reward-qrcode-alipay__img" src="/assets/alipay.JPG"><div class="reward-qrcode-alipay__text">支付宝打赏</div></span><span class="reward-qrcode-wechat"><img class="reward-qrcode-wechat__img" src="/assets/weixin.PNG"><div class="reward-qrcode-wechat__text">微信打赏</div></span></div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2020/05/21/%E7%A4%BC%E6%9C%88%E5%8D%9A%E5%AE%A2%E9%A1%B5%EF%BC%88%E6%B5%8B%E8%AF%95%E7%94%A8%EF%BC%89/"><span class="paginator-prev__text">礼月博客页（测试用）</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo博客框架"><span class="toc-number">1.</span> <span class="toc-text">
+      <p>CodeSheep：<span class="exturl"><a class="exturl__link" href="https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=9900012627646033790" target="_blank" rel="noopener">手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>xingkaifan：<span class="exturl"><a class="exturl__link" href="https://blog.csdn.net/xingkaifan/article/details/81105352" target="_blank" rel="noopener">创建我的GitHub账号及使用</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>小君君：<span class="exturl"><a class="exturl__link" href="https://www.cnblogs.com/qijunjun/p/7137207.html" target="_blank" rel="noopener">Git安装和使用</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<p>轩枫阁：<span class="exturl"><a class="exturl__link" href="http://www.xuanfengge.com/using-ssh-key-link-github-photo-tour.html" target="_blank" rel="noopener">使用SSH密钥连接Github</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://yoursite.com">Alec</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://yoursite.com/2020/05/21/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">http://yoursite.com/2020/05/21/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-reward reward"><div class="reward-button">请我喝杯咖啡~</div><div class="reward-qrcode"><span class="reward-qrcode-alipay"><img class="reward-qrcode-alipay__img" src="/assets/alipay.JPG"><div class="reward-qrcode-alipay__text">支付宝打赏</div></span><span class="reward-qrcode-wechat"><img class="reward-qrcode-wechat__img" src="/assets/weixin.PNG"><div class="reward-qrcode-wechat__text">微信打赏</div></span></div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2020/05/21/%E7%A4%BC%E6%9C%88%E5%8D%9A%E5%AE%A2%E9%A1%B5%EF%BC%88%E6%B5%8B%E8%AF%95%E7%94%A8%EF%BC%89/"><span class="paginator-prev__text">礼月博客页（测试用）</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo博客框架"><span class="toc-number">1.</span> <span class="toc-text">
           Hexo博客框架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、如何部署环境"><span class="toc-number">2.</span> <span class="toc-text">
           一、如何部署环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装Node-js，npm"><span class="toc-number">2.1.</span> <span class="toc-text">
           1.安装Node.js，npm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装镜像源cnpm"><span class="toc-number">2.2.</span> <span class="toc-text">
@@ -477,4 +482,4 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
           第四步、测试</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-单机如何控制不同的SSH-Keys连不同的Git环境"><span class="toc-number">6.3.</span> <span class="toc-text">
           3.单机如何控制不同的SSH Keys连不同的Git环境</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、小结"><span class="toc-number">7.</span> <span class="toc-text">
           五、小结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#资料来源："><span class="toc-number">7.1.</span> <span class="toc-text">
-          资料来源：</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/assets/toux.png" alt="avatar"></div><p class="sidebar-ov-author__text">Lee-hehe</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://weibo.com/u/5949244344?is_all=1" target="_blank" rel="noopener" data-popover="微博" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-weibo"></i></span></a><a class="sidebar-ov-social-item" href="1656935635" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a><a class="sidebar-ov-social-item" href="https://space.bilibili.com/352509007?from=search&amp;seid=12948623949174600532" target="_blank" rel="noopener" data-popover="bilibili" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">bilibili</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">0</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Attack On Mr. Moon</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v4.2.1</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.0</span></div><div>Let's run to glory.</div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.0.0"></script><script src="/js/stun-boot.js?v=2.0.0"></script><script src="/js/scroll.js?v=2.0.0"></script><script src="/js/header.js?v=2.0.0"></script><script src="/js/sidebar.js?v=2.0.0"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-epsilon2_1"},"display":{"position":"left","width":300,"height":600,"hOffset":150,"vOffset":-65},"mobile":{"show":false}});</script></body></html>
+          资料来源：</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/assets/toux.png" alt="avatar"></div><p class="sidebar-ov-author__text">Lee-hehe</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://weibo.com/u/5949244344?is_all=1" target="_blank" rel="noopener" data-popover="微博" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-weibo"></i></span></a><a class="sidebar-ov-social-item" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1656935635&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener" data-popover="QQ" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-qq"></i></span></a><a class="sidebar-ov-social-item" href="https://space.bilibili.com/352509007?from=search&amp;seid=12948623949174600532" target="_blank" rel="noopener" data-popover="哔哩哔哩" data-popover-pos="up"><span class="sidebar-ov-social-item__icon">bilibili</span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Attack On Mr. Moon</span></div><div>Let's run to glory.</div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.0.0"></script><script src="/js/stun-boot.js?v=2.0.0"></script><script src="/js/scroll.js?v=2.0.0"></script><script src="/js/header.js?v=2.0.0"></script><script src="/js/sidebar.js?v=2.0.0"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-epsilon2_1"},"display":{"position":"left","width":300,"height":600,"hOffset":150,"vOffset":-65},"mobile":{"show":false}});</script></body></html>
