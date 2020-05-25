@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://Lee-hehe.github.io/"/>
-  <updated>2020-05-23T23:26:52.283Z</updated>
+  <updated>2020-05-24T01:50:25.083Z</updated>
   <id>https://Lee-hehe.github.io/</id>
   
   <author>
@@ -15,28 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>礼月博客页（测试用）</title>
-    <link href="https://Lee-hehe.github.io/2020/05/21/%E7%A4%BC%E6%9C%88%E5%8D%9A%E5%AE%A2%E9%A1%B5%EF%BC%88%E6%B5%8B%E8%AF%95%E7%94%A8%EF%BC%89/"/>
-    <id>https://Lee-hehe.github.io/2020/05/21/礼月博客页（测试用）/</id>
-    <published>2020-05-21T12:29:16.000Z</published>
-    <updated>2020-05-23T23:26:52.283Z</updated>
-    
-    <summary type="html">
-    
-      一些功能和显示的测试…
-    
-    </summary>
-    
-      <category term="整理" scheme="https://Lee-hehe.github.io/categories/%E6%95%B4%E7%90%86/"/>
-    
-      <category term="测试" scheme="https://Lee-hehe.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="测试用" scheme="https://Lee-hehe.github.io/tags/%E6%B5%8B%E8%AF%95%E7%94%A8/"/>
-    
-  </entry>
   
   <entry>
     <title>从零开始的个人博客搭建</title>
@@ -57,15 +35,35 @@
   </entry>
   
   <entry>
+    <title>礼月博客页（测试用）</title>
+    <link href="https://Lee-hehe.github.io/2020/05/21/%E7%A4%BC%E6%9C%88%E5%8D%9A%E5%AE%A2%E9%A1%B5%EF%BC%88%E6%B5%8B%E8%AF%95%E7%94%A8%EF%BC%89/"/>
+    <id>https://Lee-hehe.github.io/2020/05/21/礼月博客页（测试用）/</id>
+    <published>2020-05-21T02:27:41.000Z</published>
+    <updated>2020-05-25T03:40:14.470Z</updated>
+    
+    <summary type="html">
+    
+      这里整理了一些功能和显示的测试，并持续改进中……
+    
+    </summary>
+    
+      <category term="整理" scheme="https://Lee-hehe.github.io/categories/%E6%95%B4%E7%90%86/"/>
+    
+    
+      <category term="测试" scheme="https://Lee-hehe.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="https://Lee-hehe.github.io/2020/05/20/hello-world/"/>
     <id>https://Lee-hehe.github.io/2020/05/20/hello-world/</id>
     <published>2020-05-20T12:29:16.000Z</published>
-    <updated>2020-05-24T01:31:37.016Z</updated>
+    <updated>2020-05-25T03:43:51.719Z</updated>
     
     <summary type="html">
     
-      Welcome to Hexo! This is your very first post.
+      Welcome to Hexo! This is your very first post...
     
     </summary>
     
