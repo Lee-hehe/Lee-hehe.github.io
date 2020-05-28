@@ -59,7 +59,7 @@
   </style>
   <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
   </style>
-<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
   <div class="scrollbar" id="bar">
@@ -485,25 +485,25 @@
 <h3 id="七、插入配置测试"><a href="#七、插入配置测试" class="headerlink" title="七、插入配置测试"></a>七、插入配置测试</h3><h4 id="1-插入b站视频"><a href="#1-插入b站视频" class="headerlink" title="1. 插入b站视频"></a>1. 插入b站视频</h4><p><code>hexo-tag-bili</code></p>
 <p>用来在文章或单页面中插入B站外链视频</p>
 <p>在Hexo博客的文章或者单页面中使用以下标签语法插入视频</p>
-<pre class=" language-markdownm"><code class="language-markdownm">{% bili video_id %}
+<pre><code class="markdownm">{% bili video_id %}
 </code></pre>
 <p>若视频网址为：<a href="https://www.bilibili.com/video/BV1Aa4y147bc?p=1" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Aa4y147bc?p=1</a></p>
 <p>则在文章中插入的标签语法为：</p>
-<pre class=" language-markdownm"><code class="language-markdownm">{% bili 1Aa4y147bc %}
+<pre><code class="markdownm">{% bili 1Aa4y147bc %}
 </code></pre>
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=1Aa4y147bc&page=" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div>
 <p>若视频网址在第二页：<a href="https://www.bilibili.com/video/BV1Aa4y147bc?p=2" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Aa4y147bc?p=2</a></p>
 <p>则在文章中插入的标签语法为：</p>
-<pre class=" language-markdownm"><code class="language-markdownm">{% bili 1Aa4y147bc 2 %}
+<pre><code class="markdownm">{% bili 1Aa4y147bc 2 %}
 </code></pre>
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=1Aa4y147bc&page=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div>
 <h4 id="2-插入图片集"><a href="#2-插入图片集" class="headerlink" title="2. 插入图片集"></a>2. 插入图片集</h4><p><code>hexo-tag-fancybox_img</code></p>
 <p>用来在文章或单页面中图片</p>
 <p>在Hexo博客的文章或者单页面中使用以下标签语法插入图片以及描述</p>
-<pre class=" language-markdownm"><code class="language-markdownm">{% fb_img src [caption] %}
+<pre><code class="markdownm">{% fb_img src [caption] %}
 </code></pre>
 <p>例如：</p>
-<pre class=" language-markdownm"><code class="language-markdownm">{% fb_img https://ws3.sinaimg.cn/large/006bYVyvly1fxxewq3plij30yn0jjkjl.jpg sakura %}
+<pre><code class="markdownm">{% fb_img https://ws3.sinaimg.cn/large/006bYVyvly1fxxewq3plij30yn0jjkjl.jpg sakura %}
 </code></pre>
 <a href="https://cdn.jsdelivr.net/gh/Lee-hehe/Figurebed/img/20200525113812.png" target="_blank" rel="noopener" data-fancybox="images" data-caption="柱"><img src="https://cdn.jsdelivr.net/gh/Lee-hehe/Figurebed/img/20200525113812.png" /></a>
 <a href="https://cdn.jsdelivr.net/gh/Lee-hehe/Figurebed/img/20200523042653.JPG" target="_blank" rel="noopener" data-fancybox="images" data-caption="灶门炭治郎&富冈义勇"><img src="https://cdn.jsdelivr.net/gh/Lee-hehe/Figurebed/img/20200523042653.JPG" /></a>
