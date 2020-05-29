@@ -6,7 +6,7 @@
   
   <title itemprop="name">从零开始的个人博客搭建 | Attack On Mr. Moon</title>
   
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="/images/favicon.ico">
   
   <meta http-equiv="x-dns-prefetch-control" content="on">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
@@ -73,7 +73,7 @@
     <div class="focusinfo no-select">
       <div class="header-tou">
         <a href="https://lee-hehe.gitee.io/">
-          <img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.1/img/custom/avatar.jpg">
+          <img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.2/img/custom/avatar.jpg">
         </a>
       </div>
       <div class="header-info">
@@ -87,7 +87,7 @@
               
                 <li>
                   <a href="https://weibo.com/u/5949244344?is_all=1" target="_blank" class="social-github" title="weibo">
-                    <img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.1/img/social/sina.png">
+                    <img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.2/img/social/sina.png">
                   </a>
                 </li>
               
@@ -95,7 +95,7 @@
               
                 <li>
                   <a href="https://github.com/Lee-hehe" target="_blank" class="social-github" title="github">
-                    <img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.1/img/social/github.png">
+                    <img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.2/img/social/github.png">
                   </a>
                 </li>
               
@@ -103,7 +103,7 @@
               
                 <li>
                   <a href="https://gitee.com/lee-hehe" target="_blank" class="social-github" title="gitee">
-                    <img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.1/img/social/gitee.png">
+                    <img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.2/img/social/gitee.png">
                   </a>
                 </li>
               
@@ -111,7 +111,7 @@
               
                 <li>
                   <a href="https://space.bilibili.com/352509007" target="_blank" class="social-github" title="bilibili">
-                    <img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.1/img/social/bilibili.png">
+                    <img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.2/img/social/bilibili.png">
                   </a>
                 </li>
               
@@ -119,7 +119,7 @@
               
                 <li>
                   <a href="https://music.163.com/#/user/home?id=514154509" target="_blank" class="social-github" title="wangyiyun">
-                    <img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.1/img/social/wangyiyun.png">
+                    <img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.2/img/social/wangyiyun.png">
                   </a>
                 </li>
               
@@ -127,7 +127,7 @@
               
                 <li>
                   <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=1656935635&amp;site=qq&amp;menu=yes" target="_blank" class="social-github" title="qq">
-                    <img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.1/img/social/qq.png">
+                    <img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.2/img/social/qq.png">
                   </a>
                 </li>
               
@@ -390,7 +390,7 @@
 <p>​    若不存在此目录，则进行第二步操作，否则，你本机已经存在ssh公钥和私钥，可以略过第二步，直接进入第三步操作。</p>
 <p><strong>第二步</strong>、创建一对新的SSH密钥(keys)</p>
 <p>​    输入如下命令：</p>
-<pre><code>$ssh-keygen -t rsa -C &quot;your_email@example.com&quot;
+<pre><code>$ssh-keygen -t rsa -C "your_email@example.com"
 #这将按照你提供的邮箱地址，创建一对密钥
 Generating public/private rsa key pair.
 Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): [Press enter]
@@ -421,7 +421,7 @@ The key fingerprint is:
 <p>​    为了确认我们可以通过SSH连接GitHub，我们输入<code>ssh -T git@github.com</code></p>
 <p>​    输入后会要求我们提供验证密码，输入之前创建的密码就ok了</p>
 <p>​    你可能会看到告警信息，如下：</p>
-<pre><code>The authenticity of host &#39;github.com (207.97.227.239)&#39; can&#39;t be established.
+<pre><code>The authenticity of host 'github.com (207.97.227.239)' can't be established.
 RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
 Are you sure you want to continue connecting (yes/no)?
 </code></pre><p>​    不用担心，直接输入yes</p>
@@ -429,8 +429,8 @@ Are you sure you want to continue connecting (yes/no)?
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/ss//20200527024527.png" alt=""></p>
 <p>e. 然后设置本地的用户名和邮箱</p>
 <ul>
-<li>设置用户名：<code>git config --global user.name &#39;你在GitHub上注册的用户名&#39;</code></li>
-<li>设置用户邮箱：<code>git config --global user.email &#39;注册时候的邮箱&#39;</code></li>
+<li>设置用户名：<code>git config --global user.name '你在GitHub上注册的用户名'</code></li>
+<li>设置用户邮箱：<code>git config --global user.email '注册时候的邮箱'</code></li>
 </ul>
 <p>配置完成之后，使用<code>git config --list</code>命令查看是否配置成功</p>
 <h4 id="1-安装Node-js，npm"><a href="#1-安装Node-js，npm" class="headerlink" title="1.安装Node.js，npm"></a>1.安装Node.js，npm</h4><p>a. 进入<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js官网</a></p>
@@ -482,7 +482,7 @@ Are you sure you want to continue connecting (yes/no)?
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/ss//20200527040508.png" alt=""></p>
 <p>可以看到博客已经搭建好了，而且默认创建了一篇标题为“Hello World”的文章，里面简介了hexo的使用方法</p>
 <h4 id="2-新建一篇文章"><a href="#2-新建一篇文章" class="headerlink" title="2.新建一篇文章"></a>2.新建一篇文章</h4><ul>
-<li>先断开掉：<code>Ctrl + c</code>，然后创建一篇文章：<code>hexo n &quot;此处为博客文章名称&quot;</code></li>
+<li>先断开掉：<code>Ctrl + c</code>，然后创建一篇文章：<code>hexo n "此处为博客文章名称"</code></li>
 </ul>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/ss//20200527041036.png" alt=""></p>
 <ul>
@@ -578,15 +578,33 @@ Are you sure you want to continue connecting (yes/no)?
 <p>爱吃红豆的猫：<a href="https://blog.csdn.net/weixin_42693104/article/details/82584849" target="_blank" rel="noopener">GitHub的注册与使用</a></p>
 <p>轩枫：<a href="http://www.xuanfengge.com/using-ssh-key-link-github-photo-tour.html" target="_blank" rel="noopener">使用SSH密钥连接Github</a></p>
 <p>cloudy：<a href="https://cloudy-liu.github.io/2018/04/07/Hexo_yilia_%E4%B8%BB%E9%A2%98%E4%B8%80%E6%8F%BD%E5%AD%90%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" target="_blank" rel="noopener">Hexo yilia 主题一揽子使用方案</a></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
         </div>
         <!-- .entry-content -->
         <div class="single-reward">
           <div class="reward-open">赏
             <div class="reward-main">
               <ul class="reward-row">
-                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.1/img/custom/donate/AliPayQR.jpg"></li>
-                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.1/img/custom/donate/WeChanQR.jpg"></li>
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.2/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.2/img/custom/donate/WeChanQR.jpg"></li>
               </ul>
             </div>
           </div>
@@ -609,15 +627,15 @@ Are you sure you want to continue connecting (yes/no)?
           
             <div class="post-nepre half previous">
           
-            <a href="/2020/05/28/test-I/" rel="prev">
+            <a href="/2020/05/29/Telegram%E7%BA%B8%E9%A3%9E%E6%9C%BA%E7%9A%84%E6%B3%A8%E5%86%8C%E5%92%8C%E4%BD%BF%E7%94%A8/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Lee-hehe/Figurebed/img/20200523004531.JPG" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Lee-hehe/Figurebed/img/20200523004531.JPG">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.1/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://gitee.com/lee-hehe/Figurebed/raw/master/ss//20200529102814.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://gitee.com/lee-hehe/Figurebed/raw/master/ss//20200529102814.jpg">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                test I</h3>
+                Telegram纸飞机的注册和使用</h3>
                 <hr>
               </div>
             </a>
@@ -724,7 +742,7 @@ Are you sure you want to continue connecting (yes/no)?
     </div>
     <div class="footer-device">
     <p style="font-family: 'Ubuntu', sans-serif;">
-        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Coding Pages</a>
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Gitee Pages</a>
         </span>
       </p>
     </div>
@@ -808,7 +826,7 @@ $(document).ready(function() {
   </section>
   <div id="mo-nav" class="">
   <div class="m-avatar">
-    <img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.1/img/custom/avatar.jpg">
+    <img src="https://cdn.jsdelivr.net/gh/Lee-hehe/cdn@1.2/img/custom/avatar.jpg">
   </div>
   <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">Attack On Mr. Moon🌙</p>
   <p style="text-align: center; word-spacing: 10px;">
@@ -975,7 +993,7 @@ $(document).ready(function() {
       </li>
     
   </ul>
-  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2020 hexo-sakura</p>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2020</p>
 </div>
 <button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
