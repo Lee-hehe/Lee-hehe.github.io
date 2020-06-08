@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lee-hehe.gitee.io/"/>
-  <updated>2020-05-29T21:30:36.019Z</updated>
+  <updated>2020-06-08T03:50:15.727Z</updated>
   <id>https://lee-hehe.gitee.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>驾考宝典</title>
+    <link href="https://lee-hehe.gitee.io/2020/06/05/%E9%A9%BE%E8%80%83%E5%AE%9D%E5%85%B8/"/>
+    <id>https://lee-hehe.gitee.io/2020/06/05/驾考宝典/</id>
+    <published>2020-06-04T16:24:17.000Z</published>
+    <updated>2020-06-08T03:50:15.727Z</updated>
+    
+    <summary type="html">
+    
+      科目一基础知识讲解
+    
+    </summary>
+    
+      <category term="整理" scheme="https://lee-hehe.gitee.io/categories/%E6%95%B4%E7%90%86/"/>
+    
+    
+      <category term="指南" scheme="https://lee-hehe.gitee.io/tags/%E6%8C%87%E5%8D%97/"/>
+    
+  </entry>
   
   <entry>
     <title>Typora的基本使用方法</title>
