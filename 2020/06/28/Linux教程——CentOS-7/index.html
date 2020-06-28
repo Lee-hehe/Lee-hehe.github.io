@@ -626,7 +626,8 @@
 <li>usr：默认安装软件的目录，类似Windows中的Program Files目录</li>
 <li>opt：是主机额外安装软件拜访的目录</li>
 </ul>
-<h2 id="五、Linux的常用命令"><a href="#五、Linux的常用命令" class="headerlink" title="五、Linux的常用命令"></a>五、Linux的常用命令</h2><h3 id="5-1-基本命令"><a href="#5-1-基本命令" class="headerlink" title="5.1 基本命令"></a>5.1 基本命令</h3><ul>
+<h2 id="五、Linux的常用命令"><a href="#五、Linux的常用命令" class="headerlink" title="五、Linux的常用命令"></a>五、Linux的常用命令</h2><h3 id="5-1-基本命令"><a href="#5-1-基本命令" class="headerlink" title="5.1 基本命令"></a>5.1 基本命令</h3><p>命令的模式：<code>命令 [选项] 操作的文件或路径</code></p>
+<ul>
 <li><code>ifconfig</code>：查看IP地址等信息</li>
 <li><code>su [xx]</code>（switch user）：更换用户，如果直接写su表示更换成root管理员账号</li>
 <li><code>pwd</code>（print working directory）：打印当前所在路径</li>
@@ -707,6 +708,7 @@ vi 文件
 <li>编辑模式：<code>i|a|o</code>对文件进行修改，<code>esc</code>退出</li>
 <li>底行模式：显示行号，取消行号，保存退出，不保存退出</li>
 </ul>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628191218.png" alt=""></p>
 <pre><code class="shell">i        #在当前光标处，进入编辑模式
 a        #在当前光标后一格，进入编辑模式
 o        #在当前光标下一行，进入编辑模式
@@ -806,6 +808,127 @@ cat -n 文件
 </code></pre>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628185827.png" alt=""></p>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628190037.png" alt=""></p>
+<h3 id="5-4-文件压缩和解压缩"><a href="#5-4-文件压缩和解压缩" class="headerlink" title="5.4 文件压缩和解压缩"></a>5.4 文件压缩和解压缩</h3><p>Linux的压缩文件后缀为<code>.tar.gz</code></p>
+<ul>
+<li><code>tar [选项] 打包文件名 待打包文件...</code>，打包文件或者文件夹<ul>
+<li><code>-c</code>：创建一个打包文件</li>
+<li><code>-x</code>：解开一个打包文件</li>
+<li><code>-z</code>：使用gzip压缩文件</li>
+<li><code>-j</code>：使用bzip2压缩文件</li>
+<li><code>-v</code>：压缩过程显示文件</li>
+<li><code>-f</code>：使用文档名</li>
+</ul>
+</li>
+</ul>
+<pre><code class="shell">tar -zcf 打包后的文件名 待打包的文件...
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628235602.png" alt=""></p>
+<pre><code class="shell">tar -zxf 待解压的压缩包
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629000116.png" alt=""></p>
+<pre><code class="shell">rm -rf ./*.txt        #删除当前路径下的所有.txt文件
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629000609.png" alt=""></p>
+<pre><code class="shell">tar -zxvf 待解压的压缩包                                #解压并显示过程
+tar -zcvf 打包后的文件名 待打包的文件...    #压缩并显示过程
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629000954.png" alt=""></p>
+<ul>
+<li>针对ZIP类型<ul>
+<li>安装unzip<ul>
+<li><code>yum -y install zip</code></li>
+<li><code>yum -y install unzip</code></li>
+</ul>
+</li>
+<li>解压<ul>
+<li><code>unzip 压缩包名称</code></li>
+</ul>
+</li>
+<li>打包<ul>
+<li><code>zip 压缩包名称 文件1 文件2 目录1 目录2...</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code class="shell">zip 打包后的文件名 待压缩的文件    #zip类型压缩
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629001818.png" alt=""></p>
+<pre><code class="shell">unzip 待解压的压缩包        #zip类型解压
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629002221.png" alt=""></p>
+<h3 id="5-5-用户和用户组的操作"><a href="#5-5-用户和用户组的操作" class="headerlink" title="5.5 用户和用户组的操作"></a>5.5 用户和用户组的操作</h3><h4 id="5-5-1-Linux用户的分类"><a href="#5-5-1-Linux用户的分类" class="headerlink" title="5.5.1 Linux用户的分类"></a>5.5.1 Linux用户的分类</h4><ul>
+<li>超级用户：root    uid = 0</li>
+<li>普通用户：uid = 500~60000</li>
+<li>伪用户：uid = 1~499</li>
+</ul>
+<p>伪用户：伪用户不能登陆系统，也不会在/home下创建相应的文件夹，主要是执行一些系统命令</p>
+<h4 id="5-5-2-Linux用户组"><a href="#5-5-2-Linux用户组" class="headerlink" title="5.5.2 Linux用户组"></a>5.5.2 Linux用户组</h4><p>每个用户组可以包含多个用户</p>
+<p>每个用户至少属于一个用户组</p>
+<h4 id="5-5-3-用户相关的配置信息"><a href="#5-5-3-用户相关的配置信息" class="headerlink" title="5.5.3 用户相关的配置信息"></a>5.5.3 用户相关的配置信息</h4><ul>
+<li><code>/etc/password</code>：用户信息文件</li>
+<li><code>/etc/shadow</code>：保存密码信息</li>
+<li><code>/etc/group</code>：用户组信息</li>
+<li><code>/etc/gshadow</code>：用户组密码信息</li>
+</ul>
+<h4 id="5-5-4-Linux用户组的操作"><a href="#5-5-4-Linux用户组的操作" class="headerlink" title="5.5.4 Linux用户组的操作"></a>5.5.4 Linux用户组的操作</h4><ul>
+<li>创建用户组<ul>
+<li><code>groupadd 组名</code></li>
+</ul>
+</li>
+<li>修改用户组名<ul>
+<li><code>grooupmod -n 新组名 旧组名</code></li>
+</ul>
+</li>
+<li>删除用户组<ul>
+<li><code>groupdel 组名</code></li>
+</ul>
+</li>
+<li>显示用户所在的组<ul>
+<li><code>groups</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="5-5-5-Linux用户的操作"><a href="#5-5-5-Linux用户的操作" class="headerlink" title="5.5.5 Linux用户的操作"></a>5.5.5 Linux用户的操作</h4><ul>
+<li>添加用户<ul>
+<li><code>useradd [选项] 用户名</code>：创建的用户都放在/home/下面</li>
+<li>选项<ul>
+<li><code>-g</code>：设置用户组</li>
+<li><code>-G</code>：设置用户组列表，多个用户组用<code>，</code>隔开</li>
+<li><code>-u</code>：手动指定用户id，必须唯一且大于499</li>
+<li><code>-p</code>：为新用户指定密码，但是该密码需要设置为MD5加密后的密文</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code class="shell">groupadd 组1                        #新建组1
+groupadd 组2                        #新建组2
+
+useradd -g 组1 用户名1    #在组1中新建用户1
+useradd -g 组2 用户名2    #在组2中新建用户2
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629010019.png" alt=""></p>
+<ul>
+<li>修改用户<ul>
+<li><code>usermod [选项] 用户名</code></li>
+<li>选项</li>
+</ul>
+</li>
+<li>删除用户<ul>
+<li><code>userdel [选项] 用户名</code></li>
+<li>选项</li>
+</ul>
+</li>
+<li>设置用户密码<ul>
+<li><code>passwd 用户名</code></li>
+<li>注意</li>
+</ul>
+</li>
+</ul>
+<pre><code class="shell">passwd 需要修改密码的用户名
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629010518.png" alt=""></p>
 <h2 id="资料来源："><a href="#资料来源：" class="headerlink" title="资料来源："></a>资料来源：</h2><h4 id="资源："><a href="#资源：" class="headerlink" title="资源："></a>资源：</h4><ul>
 <li><a href="https://www.kernel.org/" target="_blank" rel="noopener">Linux的内核版本官网</a></li>
 <li><a href="https://pan.baidu.com/s/1ynMaUqtIzdfQt9d138OndQ" target="_blank" rel="noopener">VMware百度云</a>：提取码fnw8</li>
