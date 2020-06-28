@@ -378,31 +378,32 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h2 id="Linux教程——CentOS-7"><a href="#Linux教程——CentOS-7" class="headerlink" title="Linux教程——CentOS 7"></a>Linux教程——CentOS 7</h2><p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200627143118.jpg" alt=""></p>
-<h3 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h3><h4 id="1-1-开发环境"><a href="#1-1-开发环境" class="headerlink" title="1.1 开发环境"></a>1.1 开发环境</h4><p>平时大家大多是在Windows或者Mac操作系统下去编写代码进行开发，在开发环境中安装大量的软件，这样会导致环境的稳定性和安全性降低</p>
-<h4 id="1-2-生产环境"><a href="#1-2-生产环境" class="headerlink" title="1.2 生产环境"></a>1.2 生产环境</h4><p>是将程序运行在此环境中，供用户去使用。这个环境是有专业的人员去维护，一般 人是没有权限去操作生产环境的</p>
-<h4 id="1-3-测试环境"><a href="#1-3-测试环境" class="headerlink" title="1.3 测试环境"></a>1.3 测试环境</h4><p>一般克隆一份生产环境，会将开发环境中的程序部署到测试环境中，这个环境的主要目的是去程序进程检测，收集程序中的各种问题，并交给开发人员进行修改</p>
-<h4 id="1-4-操作系统的选择"><a href="#1-4-操作系统的选择" class="headerlink" title="1.4 操作系统的选择"></a>1.4 操作系统的选择</h4><p>生产环境中，常用的操作系统有Windows 2003 service、Linux、Unix等等，Linux操作系统， 在生产环境中占据了大量的市场份额，Linux主要以稳定、可靠、免费的特点成为全球使用最多的服务器操作系统。</p>
+          <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200627143118.jpg" alt=""></p>
+<h1 id="Linux教程——CentOS-7"><a href="#Linux教程——CentOS-7" class="headerlink" title="Linux教程——CentOS 7"></a>Linux教程——CentOS 7</h1><p>Linux常用命令，软件安装以及项目部署</p>
+<h2 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h2><h3 id="1-1-开发环境"><a href="#1-1-开发环境" class="headerlink" title="1.1 开发环境"></a>1.1 开发环境</h3><p>平时大家大多是在Windows或者Mac操作系统下去编写代码进行开发，在开发环境中安装大量的软件，这样会导致环境的稳定性和安全性降低</p>
+<h3 id="1-2-生产环境"><a href="#1-2-生产环境" class="headerlink" title="1.2 生产环境"></a>1.2 生产环境</h3><p>是将程序运行在此环境中，供用户去使用。这个环境是有专业的人员去维护，一般 人是没有权限去操作生产环境的</p>
+<h3 id="1-3-测试环境"><a href="#1-3-测试环境" class="headerlink" title="1.3 测试环境"></a>1.3 测试环境</h3><p>一般克隆一份生产环境，会将开发环境中的程序部署到测试环境中，这个环境的主要目的是去程序进程检测，收集程序中的各种问题，并交给开发人员进行修改</p>
+<h3 id="1-4-操作系统的选择"><a href="#1-4-操作系统的选择" class="headerlink" title="1.4 操作系统的选择"></a>1.4 操作系统的选择</h3><p>生产环境中，常用的操作系统有Windows 2003 service、Linux、Unix等等，Linux操作系统， 在生产环境中占据了大量的市场份额，Linux主要以稳定、可靠、免费的特点成为全球使用最多的服务器操作系统。</p>
 <p>Linux操作系统现在已经成为后台开发人员必备的技能，并且后期学习的各种知识都会涉及到Linux操作系统。</p>
-<h3 id="二、Linux介绍"><a href="#二、Linux介绍" class="headerlink" title="二、Linux介绍"></a>二、Linux介绍</h3><h4 id="2-1-Linux介绍"><a href="#2-1-Linux介绍" class="headerlink" title="2.1 Linux介绍"></a>2.1 Linux介绍</h4><p>在Linux操作系统出现之前，还有一个操作系统叫做Minix，Minix操作系统是由Andrew的大学教授研发出来的，当时大学教授是为了给学生上课，买了一套Unix操作系统，参考Unix自己写了一个操作系统，并且命名为Minix。同时将Minix开源， 供学校内部的研究和教学，到了2000年，Andrew将Minix操作系统完全对外开源。</p>
+<h2 id="二、Linux介绍"><a href="#二、Linux介绍" class="headerlink" title="二、Linux介绍"></a>二、Linux介绍</h2><h3 id="2-1-Linux介绍"><a href="#2-1-Linux介绍" class="headerlink" title="2.1 Linux介绍"></a>2.1 Linux介绍</h3><p>在Linux操作系统出现之前，还有一个操作系统叫做Minix，Minix操作系统是由Andrew的大学教授研发出来的，当时大学教授是为了给学生上课，买了一套Unix操作系统，参考Unix自己写了一个操作系统，并且命名为Minix。同时将Minix开源， 供学校内部的研究和教学，到了2000年，Andrew将Minix操作系统完全对外开源。</p>
 <p>Minix由于完全对外开源之后，在互联网上迅速的传播，但是大家在使用时，发展Minix不是很完美，内部存在各种各样问题。用户将问题解决后，编写了一个补丁，将补丁以邮件的方式发给Andrew，但是Andrew教授最初的目的只是为了教学和研究。</p>
 <p>与此同时，一位芬兰的大学生出现了，叫Linus，在Minix操作系统基础上，自己添加了一些补丁和插件，并将其命名为Linux操作系统，并且完全对外开源，而且开始维护Linux操作系统。Git也是Linus研发的。</p>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200627151207.jpg" alt="" title="Linus Torvalds"></p>
-<h4 id="2-2-Linux的版本"><a href="#2-2-Linux的版本" class="headerlink" title="2.2 Linux的版本"></a>2.2 Linux的版本</h4><p>Linux的版本分为两种，一种是Linus团队正在维护的开源内核版本。另一种是一 些厂商基于内核版本封装的发行版本。</p>
+<h3 id="2-2-Linux的版本"><a href="#2-2-Linux的版本" class="headerlink" title="2.2 Linux的版本"></a>2.2 Linux的版本</h3><p>Linux的版本分为两种，一种是Linus团队正在维护的开源内核版本。另一种是一 些厂商基于内核版本封装的发行版本。</p>
 <ul>
 <li><a href="https://www.kernel.org/" target="_blank" rel="noopener">Linux的内核版本官网</a></li>
 <li>Linux的发行版本，这里演示的发行版本是CentOS</li>
 </ul>
 <p><strong>Linux的常见发行版本</strong></p>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200627152002.png" alt="" title="Linux的常见发行版本"></p>
-<h4 id="2-3-Linux和Windows的区别"><a href="#2-3-Linux和Windows的区别" class="headerlink" title="2.3 Linux和Windows的区别"></a>2.3 Linux和Windows的区别</h4><ul>
+<h3 id="2-3-Linux和Windows的区别"><a href="#2-3-Linux和Windows的区别" class="headerlink" title="2.3 Linux和Windows的区别"></a>2.3 Linux和Windows的区别</h3><ul>
 <li>Linux是严格区分大小写的，Windows无所谓。</li>
 <li>Linux中一 切皆是文件。</li>
 <li>Linux中文件是没有后缀的， 但是他有一 些约定俗成的后缀。</li>
 <li>Windows下的软件一般是无法直接运行的Linux中。</li>
 </ul>
 <p><strong>PS：我们在学习Linux时，参考Windows下做了什么，就在Linux中做什么</strong></p>
-<h3 id="三、Linux安装"><a href="#三、Linux安装" class="headerlink" title="三、Linux安装"></a>三、Linux安装</h3><ul>
+<h2 id="三、Linux安装"><a href="#三、Linux安装" class="headerlink" title="三、Linux安装"></a>三、Linux安装</h2><ul>
 <li>安装Linux，我们需要一个创建虚拟机的工具，用来安装虚拟环境：VMware或者Virtual Box (采用VMware)</li>
 </ul>
 <p><a href="https://pan.baidu.com/s/1ynMaUqtIzdfQt9d138OndQ" target="_blank" rel="noopener">VMware百度云</a>：提取码fnw8</p>
@@ -414,7 +415,7 @@
 <li>安装一个在Windows上连接Linux的图形化界面：Xterm，SSH，XShell(Xterm)</li>
 </ul>
 <p><a href="https://www.netsarang.com/zh/free-for-home-school/" target="_blank" rel="noopener">Xshell和Xftp免费版官网领取地址</a></p>
-<h4 id="3-1-安装VMware"><a href="#3-1-安装VMware" class="headerlink" title="3.1 安装VMware"></a>3.1 安装VMware</h4><p><a href="https://pan.baidu.com/s/1ynMaUqtIzdfQt9d138OndQ" target="_blank" rel="noopener">VMware百度云</a>：提取码fnw8</p>
+<h3 id="3-1-安装VMware"><a href="#3-1-安装VMware" class="headerlink" title="3.1 安装VMware"></a>3.1 安装VMware</h3><p><a href="https://pan.baidu.com/s/1ynMaUqtIzdfQt9d138OndQ" target="_blank" rel="noopener">VMware百度云</a>：提取码fnw8</p>
 <p><strong>注意：安装VMware之前需要检查虚拟化是否已开启，若未开启，则需根据自己的电脑品牌型号自行百度并开启虚拟化</strong></p>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200627154727.png" alt=""></p>
 <p>安装时一直下一步即可（安装位置可以更改）</p>
@@ -436,7 +437,7 @@
 <ol start="4">
 <li>激活完成</li>
 </ol>
-<h4 id="3-2-安装Xterm"><a href="#3-2-安装Xterm" class="headerlink" title="3.2 安装Xterm"></a>3.2 安装Xterm</h4><p><a href="https://www.netsarang.com/zh/free-for-home-school/" target="_blank" rel="noopener">Xshell和Xftp免费版官网领取地址</a></p>
+<h3 id="3-2-安装Xterm"><a href="#3-2-安装Xterm" class="headerlink" title="3.2 安装Xterm"></a>3.2 安装Xterm</h3><p><a href="https://www.netsarang.com/zh/free-for-home-school/" target="_blank" rel="noopener">Xshell和Xftp免费版官网领取地址</a></p>
 <ol>
 <li>进入领取地址后，输入姓名和邮箱地址，选择两者再点击下载，此时你填写的邮箱会收到两个邮件</li>
 </ol>
@@ -448,7 +449,7 @@
 <ol start="3">
 <li>下载完成后，双击运行安装程序，一直点下一步即可完成安装（安装位置可以更改）</li>
 </ol>
-<h4 id="3-3-在VMware中安装Linux"><a href="#3-3-在VMware中安装Linux" class="headerlink" title="3.3 在VMware中安装Linux"></a>3.3 在VMware中安装Linux</h4><ol>
+<h3 id="3-3-在VMware中安装Linux"><a href="#3-3-在VMware中安装Linux" class="headerlink" title="3.3 在VMware中安装Linux"></a>3.3 在VMware中安装Linux</h3><ol>
 <li>打开VMware，点击文件，新建虚拟机</li>
 </ol>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200627161724.png" alt=""></p>
@@ -539,7 +540,7 @@
 <li>测试虚拟机中的网络是否畅通，右键打开终端，输入<code>ping www.baidu.com</code>查看网络是否畅通，<code>Ctrl + C</code>停止</li>
 </ol>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200627181420.png" alt=""></p>
-<h4 id="3-4-使用Xterm链接Linux"><a href="#3-4-使用Xterm链接Linux" class="headerlink" title="3.4 使用Xterm链接Linux"></a>3.4 使用Xterm链接Linux</h4><ol>
+<h3 id="3-4-使用Xterm链接Linux"><a href="#3-4-使用Xterm链接Linux" class="headerlink" title="3.4 使用Xterm链接Linux"></a>3.4 使用Xterm链接Linux</h3><ol>
 <li>打开Xshell，点击左上角新建</li>
 </ol>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200627185734.png" alt=""></p>
@@ -567,7 +568,7 @@
 </ol>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200627191327.png" alt=""></p>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200627191656.png" alt=""></p>
-<h4 id="3-5-Xshell连接不上Linux的原因"><a href="#3-5-Xshell连接不上Linux的原因" class="headerlink" title="3.5 Xshell连接不上Linux的原因"></a>3.5 Xshell连接不上Linux的原因</h4><ol>
+<h3 id="3-5-Xshell连接不上Linux的原因"><a href="#3-5-Xshell连接不上Linux的原因" class="headerlink" title="3.5 Xshell连接不上Linux的原因"></a>3.5 Xshell连接不上Linux的原因</h3><ol>
 <li>Linux没有开启网络</li>
 </ol>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200627192225.png" alt=""></p>
@@ -593,7 +594,7 @@
 <p>或者</p>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200627194037.png" alt=""></p>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200627194217.png" alt=""></p>
-<h4 id="3-6-设置静态IP"><a href="#3-6-设置静态IP" class="headerlink" title="3.6 设置静态IP"></a>3.6 设置静态IP</h4><p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628000633.png" alt=""></p>
+<h3 id="3-6-设置静态IP"><a href="#3-6-设置静态IP" class="headerlink" title="3.6 设置静态IP"></a>3.6 设置静态IP</h3><p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628000633.png" alt=""></p>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628001355.png" alt=""></p>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628002425.png" alt=""></p>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628001728.png" alt=""></p>
@@ -611,7 +612,7 @@
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628005112.png" alt=""></p>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628005203.png" alt=""></p>
 <p>此时Xshell已经可以正常连接了</p>
-<h3 id="四、Linux的目录结构"><a href="#四、Linux的目录结构" class="headerlink" title="四、Linux的目录结构"></a>四、Linux的目录结构</h3><p>Windows的目录结构是带有盘符的。<code>D：</code>、<code>E：</code>、<code>C：</code>，而Linux中是没有盘符的</p>
+<h2 id="四、Linux的目录结构"><a href="#四、Linux的目录结构" class="headerlink" title="四、Linux的目录结构"></a>四、Linux的目录结构</h2><p>Windows的目录结构是带有盘符的。<code>D：</code>、<code>E：</code>、<code>C：</code>，而Linux中是没有盘符的</p>
 <p>在Xterm中输入<code>ls /</code>查看Linux的顶级目录。</p>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200627175018.png" alt=""></p>
 <p>Linux的常用目录……</p>
@@ -625,7 +626,187 @@
 <li>usr：默认安装软件的目录，类似Windows中的Program Files目录</li>
 <li>opt：是主机额外安装软件拜访的目录</li>
 </ul>
-<h3 id="五、-Linux的基本命令"><a href="#五、-Linux的基本命令" class="headerlink" title="五、 Linux的基本命令"></a>五、 Linux的基本命令</h3><h3 id="资料来源："><a href="#资料来源：" class="headerlink" title="资料来源："></a>资料来源：</h3><h4 id="资源："><a href="#资源：" class="headerlink" title="资源："></a>资源：</h4><ul>
+<h2 id="五、Linux的常用命令"><a href="#五、Linux的常用命令" class="headerlink" title="五、Linux的常用命令"></a>五、Linux的常用命令</h2><h3 id="5-1-基本命令"><a href="#5-1-基本命令" class="headerlink" title="5.1 基本命令"></a>5.1 基本命令</h3><ul>
+<li><code>ifconfig</code>：查看IP地址等信息</li>
+<li><code>su [xx]</code>（switch user）：更换用户，如果直接写su表示更换成root管理员账号</li>
+<li><code>pwd</code>（print working directory）：打印当前所在路径</li>
+<li><code>cd xx</code>（change directory）：进入文件夹</li>
+<li><code>cd ..</code>：返回上一级文件夹</li>
+<li><code>cd /</code>：返回根路径</li>
+<li><code>ll</code>：打印当前文件夹下的所有子文件和子文件夹的详细信息</li>
+<li><code>ls</code>：打印当前文件夹下的所有子文件和子文件夹的名称</li>
+<li><code>clear</code>：清空命令行</li>
+</ul>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628135749.png" alt=""></p>
+<pre><code class="shell">su sashixin
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628140212.png" alt=""></p>
+<p><strong>注意：从root切换成其他用户不需要输入密码，但从其他用户切换到root账户需要密码</strong></p>
+<pre><code class="shell">su root
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628140826.png" alt=""></p>
+<pre><code class="shell">cd xx
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628144721.png" alt=""></p>
+<pre><code class="shell">ll
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628142020.png" alt=""></p>
+<pre><code class="shell">ls
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628142656.png" alt=""></p>
+<h3 id="5-2-文件和文件夹操作"><a href="#5-2-文件和文件夹操作" class="headerlink" title="5.2 文件和文件夹操作"></a>5.2 文件和文件夹操作</h3><ul>
+<li><code>mkdir xx</code>：在当前路径下创建一个文件夹</li>
+<li><code>touch xx.txt</code>：在当前路径下创建一个txt文件</li>
+<li><code>mv</code>：移动文件/移动并重命名文件<ul>
+<li>被移动的文件 /移动到的路径</li>
+<li>被移动的文件 /移动到的路径/重命名后的文件</li>
+</ul>
+</li>
+<li><p><code>rm</code>：移除文件</p>
+<ul>
+<li><code>-r</code>：移除文件夹，同时删除该文件夹下的所有文件和子文件夹</li>
+<li><code>-f</code>：强制删除文件</li>
+<li><code>-rf</code>：强制删除文件夹</li>
+</ul>
+</li>
+<li><p><code>cp</code>（copy）：复制文件</p>
+</li>
+</ul>
+<pre><code class="shell">mkdir xx
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628143619.png" alt=""></p>
+<pre><code class="shell">touch xx.txt        #后面可以跟多个文件，同时创建
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628144018.png" alt=""></p>
+<pre><code class="shell">mv 被移动的文件 /移动到的路径/重命名后的文件
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628145839.png" alt=""></p>
+<pre><code class="shell">rm 文件名
+rm -r 文件夹名
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628151945.png" alt=""></p>
+<pre><code class="shell">rm -f 文件名
+rm -rf 文件夹名
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628152353.png" alt=""></p>
+<p><code>./</code>表示当前目录下，可以加在需要操作的文件和文件夹之前</p>
+<p><strong>注意：在Linux没有回收站，在使用rm命令的时候，一定要小心些，删除之后就无法恢复了；慎用<code>/*</code>，其代表根目录下的所有文件，具体的我就不说了，自行理解🤪</strong></p>
+<pre><code class="shell">cp ./被拷贝的文件 /拷贝到的路径/
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628162837.png" alt=""></p>
+<h3 id="5-3-文件内容的操作"><a href="#5-3-文件内容的操作" class="headerlink" title="5.3 文件内容的操作"></a>5.3 文件内容的操作</h3><h4 id="5-3-1-创建或者编辑文件"><a href="#5-3-1-创建或者编辑文件" class="headerlink" title="5.3.1 创建或者编辑文件"></a>5.3.1 创建或者编辑文件</h4><ul>
+<li><code>touch fileName</code>：创建一个文件</li>
+<li><code>vim xxx</code>：创建一个空白文件，进入编辑页面，如果文件存在则编辑页面（若未安装图形化界面，则命令只有<code>vi</code>）</li>
+</ul>
+<pre><code class="shell">vim 文件    #若此路径下没有该文件，vim可以直接创建并打开文件；保存则创建，不保存则不创建
+vi 文件
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628164900.png" alt=""></p>
+<h4 id="5-3-2-文件三种模式"><a href="#5-3-2-文件三种模式" class="headerlink" title="5.3.2 文件三种模式"></a>5.3.2 文件三种模式</h4><ul>
+<li>一般模式：复制一行，粘贴</li>
+<li>编辑模式：<code>i|a|o</code>对文件进行修改，<code>esc</code>退出</li>
+<li>底行模式：显示行号，取消行号，保存退出，不保存退出</li>
+</ul>
+<pre><code class="shell">i        #在当前光标处，进入编辑模式
+a        #在当前光标后一格，进入编辑模式
+o        #在当前光标下一行，进入编辑模式
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628165106.png" alt=""></p>
+<pre><code class="shell">esc        #退出编辑模式
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628170250.png" alt=""></p>
+<h4 id="5-3-3-定位命令（在一般模式下运行）"><a href="#5-3-3-定位命令（在一般模式下运行）" class="headerlink" title="5.3.3 定位命令（在一般模式下运行）"></a>5.3.3 定位命令（在一般模式下运行）</h4><ul>
+<li><code>:set number</code>：显示文件行数</li>
+<li><code>:set nonumber</code>：关闭文件行数</li>
+<li><code>:n</code>或者<code>nG</code>：定位到第n行</li>
+<li><code>gg</code>：移动到文件第一行</li>
+<li><code>G</code>：移动到最后一行</li>
+</ul>
+<pre><code class="shell">:set number        #显示行号
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628172556.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628172410.png" alt=""></p>
+<pre><code class="shell">:set nonumber        #取消显示行号
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628172513.png" alt=""></p>
+<pre><code class="shell">:n        #定位到第n行
+gg        #移动到文件第一行
+G            #移动到最后一行
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628174941.png" alt=""></p>
+<h4 id="5-3-4-撤销命令（在一般模式下运行）"><a href="#5-3-4-撤销命令（在一般模式下运行）" class="headerlink" title="5.3.4 撤销命令（在一般模式下运行）"></a>5.3.4 撤销命令（在一般模式下运行）</h4><ul>
+<li><code>u</code>（undo）：撤销</li>
+<li><code>Ctrl + r</code>（redo）：反撤销</li>
+</ul>
+<pre><code class="shell">u                    #撤销
+Ctrl + r    #反撤销
+</code></pre>
+<h4 id="5-3-5-行复制（在一般模式下运行）"><a href="#5-3-5-行复制（在一般模式下运行）" class="headerlink" title="5.3.5 行复制（在一般模式下运行）"></a>5.3.5 行复制（在一般模式下运行）</h4><ul>
+<li><code>yyp</code>：复制当前行并粘贴到下一行</li>
+</ul>
+<pre><code class="shell">yy p    #yy复制光标所在的一行，每p一次粘贴一回
+</code></pre>
+<h4 id="5-3-6-删除命令（在一般模式下运行）"><a href="#5-3-6-删除命令（在一般模式下运行）" class="headerlink" title="5.3.6 删除命令（在一般模式下运行）"></a>5.3.6 删除命令（在一般模式下运行）</h4><ul>
+<li><code>dd</code>：删除光标所在行</li>
+</ul>
+<pre><code class="shell">dd        #删除光标所在行
+</code></pre>
+<h4 id="5-3-7-退出文件编辑"><a href="#5-3-7-退出文件编辑" class="headerlink" title="5.3.7 退出文件编辑"></a>5.3.7 退出文件编辑</h4><ul>
+<li><code>:wq</code>：保存并退出</li>
+<li><code>:q!</code>：强制退出不保存</li>
+</ul>
+<pre><code class="shell">:wq        #保存退出
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628170350.png" alt=""></p>
+<pre><code class="shell">:q!        #不保存退出
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628171614.png" alt=""></p>
+<h4 id="5-3-8-仅查看文件"><a href="#5-3-8-仅查看文件" class="headerlink" title="5.3.8 仅查看文件"></a>5.3.8 仅查看文件</h4><ul>
+<li><code>cat xxx</code>：直接查看文件所有内容，<ul>
+<li><code>-n</code>    显示行号</li>
+</ul>
+</li>
+<li><code>tail -f xxx</code>：可以用来查看日志</li>
+<li><code>more xxx</code>：查看大文件时，可以一页一页的向下翻，按<code>space</code>向下翻页，退出时按<code>q</code></li>
+<li><code>nl xxx</code>：从最后一行开始展示（显示行号）<ul>
+<li><code>-ba</code>    表示不论是否为空行，也同样列出行号（类似<code>cat -n</code>）</li>
+<li><code>-bt</code>    如果有空行，空的那一行不要列出行号（默认值）</li>
+</ul>
+</li>
+</ul>
+<pre><code class="shell">cat 文件
+cat -n 文件
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628182044.png" alt=""></p>
+<pre><code class="shell">more 文件
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628183157.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628183343.png" alt=""></p>
+<pre><code class="shell">nl -ba 文件        #不论是否为空行，也同样列出行号
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628183949.png" alt=""></p>
+<h4 id="5-3-9-文件搜索及替换"><a href="#5-3-9-文件搜索及替换" class="headerlink" title="5.3.9 文件搜索及替换"></a>5.3.9 文件搜索及替换</h4><ul>
+<li>搜索：<code>/内容</code>：搜索内容<ul>
+<li><code>n</code>继续往下找</li>
+<li><code>:noh</code>取消高亮</li>
+</ul>
+</li>
+<li>替换：<code>:n,$s/旧内容/新内容/g</code>：将旧内容替换为新内容<ul>
+<li><code>n</code>：表示从第n行开始</li>
+<li><code>$s</code>：表示到最后一行</li>
+<li><code>g</code>：表示全局替换</li>
+</ul>
+</li>
+</ul>
+<pre><code class="shell">/内容        #查找内容
+:noh        #取消高亮
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628184922.png" alt=""></p>
+<pre><code class="shell">:n,$s/旧内容/新内容/g        #从第一行到最后一行，将旧内容全局替换为新的内容
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628185827.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628190037.png" alt=""></p>
+<h2 id="资料来源："><a href="#资料来源：" class="headerlink" title="资料来源："></a>资料来源：</h2><h4 id="资源："><a href="#资源：" class="headerlink" title="资源："></a>资源：</h4><ul>
 <li><a href="https://www.kernel.org/" target="_blank" rel="noopener">Linux的内核版本官网</a></li>
 <li><a href="https://pan.baidu.com/s/1ynMaUqtIzdfQt9d138OndQ" target="_blank" rel="noopener">VMware百度云</a>：提取码fnw8</li>
 <li><a href="https://www.centos.org/download/" target="_blank" rel="noopener">CentOS Download</a></li>
