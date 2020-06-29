@@ -765,14 +765,14 @@ Ctrl + r    #反撤销
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628171614.png" alt=""></p>
 <h4 id="5-3-8-仅查看文件"><a href="#5-3-8-仅查看文件" class="headerlink" title="5.3.8 仅查看文件"></a>5.3.8 仅查看文件</h4><ul>
 <li><code>cat xxx</code>：直接查看文件所有内容，<ul>
-<li><code>-n</code>    显示行号</li>
+<li><code>-n</code>：显示行号</li>
 </ul>
 </li>
 <li><code>tail -f xxx</code>：可以用来查看日志</li>
 <li><code>more xxx</code>：查看大文件时，可以一页一页的向下翻，按<code>space</code>向下翻页，退出时按<code>q</code></li>
 <li><code>nl xxx</code>：从最后一行开始展示（显示行号）<ul>
-<li><code>-ba</code>    表示不论是否为空行，也同样列出行号（类似<code>cat -n</code>）</li>
-<li><code>-bt</code>    如果有空行，空的那一行不要列出行号（默认值）</li>
+<li><code>-ba</code>：表示不论是否为空行，也同样列出行号（类似<code>cat -n</code>）</li>
+<li><code>-bt</code>：如果有空行，空的那一行不要列出行号（默认值）</li>
 </ul>
 </li>
 </ul>
@@ -789,8 +789,8 @@ cat -n 文件
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200628183949.png" alt=""></p>
 <h4 id="5-3-9-文件搜索及替换"><a href="#5-3-9-文件搜索及替换" class="headerlink" title="5.3.9 文件搜索及替换"></a>5.3.9 文件搜索及替换</h4><ul>
 <li>搜索：<code>/内容</code>：搜索内容<ul>
-<li><code>n</code>继续往下找</li>
-<li><code>:noh</code>取消高亮</li>
+<li><code>n</code>：继续往下找</li>
+<li><code>:noh</code>：取消高亮</li>
 </ul>
 </li>
 <li>替换：<code>:n,$s/旧内容/新内容/g</code>：将旧内容替换为新内容<ul>
@@ -929,7 +929,213 @@ useradd -g 组2 用户名2    #在组2中新建用户2
 <pre><code class="shell">passwd 需要修改密码的用户名
 </code></pre>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629010518.png" alt=""></p>
-<h2 id="资料来源："><a href="#资料来源：" class="headerlink" title="资料来源："></a>资料来源：</h2><h4 id="资源："><a href="#资源：" class="headerlink" title="资源："></a>资源：</h4><ul>
+<h3 id="5-6-权限的操作"><a href="#5-6-权限的操作" class="headerlink" title="5.6 权限的操作"></a>5.6 权限的操作</h3><h4 id="5-6-1-理解文件描述符"><a href="#5-6-1-理解文件描述符" class="headerlink" title="5.6.1 理解文件描述符"></a>5.6.1 理解文件描述符</h4><p><code>d rwx rwx rwx</code></p>
+<p>文件类型区（d）</p>
+<ul>
+<li><code>d</code>：表示这是一个文件夹</li>
+<li><code>-</code>：表示这是一个文件</li>
+</ul>
+<p>用户权限区（u）</p>
+<ul>
+<li>表示当前用户所拥有的权限</li>
+</ul>
+<p>组权限区（g）</p>
+<ul>
+<li>表示同组用户所拥有的权限</li>
+</ul>
+<p>其他权限区（o）</p>
+<ul>
+<li>表示其他非同组用户所拥有的权限</li>
+</ul>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629161856.png" alt=""></p>
+<h4 id="5-6-2-理解rwx"><a href="#5-6-2-理解rwx" class="headerlink" title="5.6.2 理解rwx"></a>5.6.2 理解rwx</h4><ul>
+<li><code>r</code>：表示可读权限</li>
+<li><code>w</code>：表示可写权限</li>
+<li><code>x</code>：表示可执行权限</li>
+<li><code>-</code>：表示无</li>
+</ul>
+<h4 id="5-6-3-修改文件权限"><a href="#5-6-3-修改文件权限" class="headerlink" title="5.6.3 修改文件权限"></a>5.6.3 修改文件权限</h4><ul>
+<li>字符表示法<ul>
+<li><code>chmod u|g|o + r|w|x 文件名或文件夹`</code><ul>
+<li><code></code>u`：所属用户权限</li>
+<li><code>g</code>：同组权限</li>
+<li><code>o</code>：非同组用户权限</li>
+<li><code>+</code>：添加权限</li>
+<li><code>-</code>：移除权限</li>
+<li><code>=</code>：覆盖当前权限</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code class="shell">chmod u-x,g+r,o=rwx ./a.txt        
+#为当前用户移除可执行权限，为同组用户台南佳可读权限，为非同组用户覆盖权限为可读可写可执行
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629164158.png" alt=""></p>
+<ul>
+<li>数字表示法<ul>
+<li><code>chmod 700 文件名或者文件夹`</code><ul>
+<li><code></code>r`：4</li>
+<li><code>w</code>：2</li>
+<li><code>x</code>：1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code class="shell">chmod 700 文件名或者文件夹
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629173851.png" alt=""></p>
+<pre><code class="shell">chmod 666 文件名或者文件夹
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629174450.png" alt=""></p>
+<ul>
+<li>-R<ul>
+<li><code>chmod -R 777 文件夹</code>：同时授权文件夹下的所有子文件</li>
+</ul>
+</li>
+</ul>
+<pre><code class="shell">chmod 777 文件夹/                #授权文件夹
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629174918.png" alt=""></p>
+<pre><code class="shell">chmod -R 777 文件夹/        #同时授权文件夹下的所有子文件
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629174816.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629175018.png" alt=""></p>
+<h3 id="5-7-其他的命令"><a href="#5-7-其他的命令" class="headerlink" title="5.7 其他的命令"></a>5.7 其他的命令</h3><ul>
+<li>关机命令<ul>
+<li><code>poweroff</code>：关机</li>
+<li><code>reboot</code>：重启</li>
+</ul>
+</li>
+</ul>
+<pre><code class="shell">reboot
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629175626.png" alt=""></p>
+<h2 id="六、Linux网络配置"><a href="#六、Linux网络配置" class="headerlink" title="六、Linux网络配置"></a>六、Linux网络配置</h2><h3 id="6-1-网络相关命令"><a href="#6-1-网络相关命令" class="headerlink" title="6.1 网络相关命令"></a>6.1 网络相关命令</h3><ul>
+<li><code>ifconfig</code></li>
+<li><code>ping</code></li>
+</ul>
+<h3 id="6-2-网络相关概念"><a href="#6-2-网络相关概念" class="headerlink" title="6.2 网络相关概念"></a>6.2 网络相关概念</h3><ul>
+<li>IP地址</li>
+<li>子网掩码</li>
+<li>网关</li>
+<li>DNS服务器</li>
+</ul>
+<h3 id="6-3-VMWare三种网络类型"><a href="#6-3-VMWare三种网络类型" class="headerlink" title="6.3 VMWare三种网络类型"></a>6.3 VMWare三种网络类型</h3><ul>
+<li>桥接模式</li>
+<li>NAT模式</li>
+<li>仅主机模式</li>
+</ul>
+<h3 id="6-4-配置静态IP"><a href="#6-4-配置静态IP" class="headerlink" title="6.4 配置静态IP"></a>6.4 配置静态IP</h3><ul>
+<li>进行相关的IP配置<ul>
+<li>添加固定IP：IPADDR=固定IP（网段不能随意）</li>
+<li>GATEWAY=网关（一般都是192.168.网段.2）</li>
+<li>DNS1=和网关配置成一样的</li>
+</ul>
+</li>
+</ul>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629180736.png" alt=""></p>
+<h2 id="七、Linux进程管理"><a href="#七、Linux进程管理" class="headerlink" title="七、Linux进程管理"></a>七、Linux进程管理</h2><h3 id="7-1-查看当前系统瞬间进程状态"><a href="#7-1-查看当前系统瞬间进程状态" class="headerlink" title="7.1 查看当前系统瞬间进程状态"></a>7.1 查看当前系统瞬间进程状态</h3><ul>
+<li><code>ps -ef | grep xxx</code>：查看服务的进程</li>
+</ul>
+<pre><code class="shell">ps -ef | grep 服务名称        #查看服务的进程
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629181049.png" alt=""></p>
+<h3 id="7-2-停止进程"><a href="#7-2-停止进程" class="headerlink" title="7.2 停止进程"></a>7.2 停止进程</h3><ul>
+<li><code>kill [-9] pid</code>：根据pid杀死进程<ul>
+<li><code>pid</code>：进程的id</li>
+<li><code>-9</code>：表示强制终止</li>
+</ul>
+</li>
+</ul>
+<pre><code class="shell">kill -9 pid        #杀死进程
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629181621.png" alt=""></p>
+<h2 id="八、Linux服务管理"><a href="#八、Linux服务管理" class="headerlink" title="八、Linux服务管理"></a>八、Linux服务管理</h2><h3 id="8-1-什么是Linux服务"><a href="#8-1-什么是Linux服务" class="headerlink" title="8.1 什么是Linux服务"></a>8.1 什么是Linux服务</h3><p>Linux服务本质上就是进程，只是该进程运行在后台。比如sshd、mysql、防火墙等</p>
+<h3 id="8-2-服务的操作命令"><a href="#8-2-服务的操作命令" class="headerlink" title="8.2 服务的操作命令"></a>8.2 服务的操作命令</h3><ul>
+<li><code>systemct1 [start | stop | restart | reload | status] 服务名</code><ul>
+<li><code>start</code>：开启，启动</li>
+<li><code>stop</code>：关闭，停止</li>
+<li><code>restart</code>：重启</li>
+<li><code>reload</code>：重装</li>
+<li><code>status</code>：查看状态</li>
+</ul>
+</li>
+</ul>
+<pre><code class="shell">systemct1 status firewalld        #查看防火墙状态
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629182320.png" alt=""></p>
+<h3 id="8-3-查看系统服务"><a href="#8-3-查看系统服务" class="headerlink" title="8.3 查看系统服务"></a>8.3 查看系统服务</h3><ul>
+<li><code>setup</code></li>
+</ul>
+<h3 id="8-4-设置服务的开机自启"><a href="#8-4-设置服务的开机自启" class="headerlink" title="8.4 设置服务的开机自启"></a>8.4 设置服务的开机自启</h3><ul>
+<li><code>systemct1 enable service_name</code>：开启服务</li>
+<li><code>systemct1 disable service_name</code>：关闭服务</li>
+</ul>
+<h3 id="8-5-防火墙的相关操作"><a href="#8-5-防火墙的相关操作" class="headerlink" title="8.5 防火墙的相关操作"></a>8.5 防火墙的相关操作</h3><ul>
+<li>端口号查看</li>
+</ul>
+<p>如发现端口号被占用，可使用如下方式查找pid，并结束进程</p>
+<pre><code class="shell">yum -y install net-tools        #想使用指定的命令需要事先下载netstat
+netstat -naop | grep 端口号        #查看端口号占用情况
+</code></pre>
+<ul>
+<li>访问地址</li>
+</ul>
+<p>类似浏览器访问路径，无法图形化显示，一般用于测试</p>
+<pre><code class="shell">curl 访问地址
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629183846.png" alt=""></p>
+<ul>
+<li>查找文件</li>
+</ul>
+<p>在Linux中查找指定文件，参数较多，如下为根据文件名查询</p>
+<pre><code class="shell">find 路径 -type f | grep profile
+</code></pre>
+<h2 id="九、Linux其他操作指令"><a href="#九、Linux其他操作指令" class="headerlink" title="九、Linux其他操作指令"></a>九、Linux其他操作指令</h2><h3 id="9-1-端口号查看"><a href="#9-1-端口号查看" class="headerlink" title="9.1 端口号查看"></a>9.1 端口号查看</h3><p>如发现端口号被占用，可使用如下方式查找pid，并结束进程</p>
+<pre><code class="shell">yum -y install net-tools        #想使用指定的命令需要事先下载netstat
+netstat -naop | grep 端口号        #查看端口号占用情况
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629195156.png" alt=""></p>
+<h3 id="9-2-访问地址"><a href="#9-2-访问地址" class="headerlink" title="9.2 访问地址"></a>9.2 访问地址</h3><p>类似浏览器访问路径，无法图形化显示，一般用于测试</p>
+<pre><code class="shell">curl 访问地址
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629183846.png" alt=""></p>
+<h3 id="9-3-查找文件"><a href="#9-3-查找文件" class="headerlink" title="9.3 查找文件"></a>9.3 查找文件</h3><p>在Linux中查找指定文件，参数较多，如下为根据文件名查询</p>
+<pre><code class="shell">find 路径 -type f | grep profile
+</code></pre>
+<h2 id="十、软件的安装"><a href="#十、软件的安装" class="headerlink" title="十、软件的安装"></a>十、软件的安装</h2><h3 id="10-1-yum"><a href="#10-1-yum" class="headerlink" title="10.1 yum"></a>10.1 yum</h3><h3 id="10-2-npm"><a href="#10-2-npm" class="headerlink" title="10.2 npm"></a>10.2 npm</h3><h3 id="10-3-源码安装"><a href="#10-3-源码安装" class="headerlink" title="10.3 源码安装"></a>10.3 源码安装</h3><h3 id="10-4-安装JDK"><a href="#10-4-安装JDK" class="headerlink" title="10.4 安装JDK"></a>10.4 安装JDK</h3><p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629190434.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629190634.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629190949.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629191054.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629191151.png" alt=""></p>
+<h3 id="10-5-配置环境变量"><a href="#10-5-配置环境变量" class="headerlink" title="10.5 配置环境变量"></a>10.5 配置环境变量</h3><p>Linux提供了两种环境变量的文件</p>
+<ul>
+<li>第一个是用户级别的环境变量，存放在：-/.bashre</li>
+<li>第二个是系统级别的环境变量，存放在：/etc/profile</li>
+</ul>
+<p>修改哪个文件都可以，毕竟虚拟机就我们自己使用</p>
+<pre><code class="shell">vim /etc/profile        #修改配置文件
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629195757.png" alt=""></p>
+<p>在环境变量中添加如下内容</p>
+<pre><code class="shell">export JAVA_HOME=/use/local/jdk        #定义JAVA_HOME
+export PATH=$JAVA_HOME/bin:$PATH    #把JAVA_HOME添加到PATH
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629200238.png" alt=""></p>
+<ul>
+<li><code>$</code>：代表使用环境变量</li>
+<li><code>:</code>：代表Windows中的<code>;</code></li>
+<li><code>$PATH</code>：代表使用之前的path</li>
+</ul>
+<p><code>esc</code>，<code>:wq</code>：保存退出</p>
+<p>重新加载环境变量文件并查看</p>
+<pre><code class="shell">source /etc/profile    #重新加载环境变量文件
+java -version                #最终测试
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629200902.png" alt=""></p>
+<h3 id="10-6-安装Tomcat"><a href="#10-6-安装Tomcat" class="headerlink" title="10.6 安装Tomcat"></a>10.6 安装Tomcat</h3><h3 id="资料来源："><a href="#资料来源：" class="headerlink" title="资料来源："></a>资料来源：</h3><h2 id="资料来源：-1"><a href="#资料来源：-1" class="headerlink" title="资料来源："></a>资料来源：</h2><h4 id="资源："><a href="#资源：" class="headerlink" title="资源："></a>资源：</h4><ul>
 <li><a href="https://www.kernel.org/" target="_blank" rel="noopener">Linux的内核版本官网</a></li>
 <li><a href="https://pan.baidu.com/s/1ynMaUqtIzdfQt9d138OndQ" target="_blank" rel="noopener">VMware百度云</a>：提取码fnw8</li>
 <li><a href="https://www.centos.org/download/" target="_blank" rel="noopener">CentOS Download</a></li>
