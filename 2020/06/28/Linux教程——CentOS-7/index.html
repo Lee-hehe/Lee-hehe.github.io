@@ -1135,7 +1135,124 @@ export PATH=$JAVA_HOME/bin:$PATH    #把JAVA_HOME添加到PATH
 java -version                #最终测试
 </code></pre>
 <p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200629200902.png" alt=""></p>
-<h3 id="10-6-安装Tomcat"><a href="#10-6-安装Tomcat" class="headerlink" title="10.6 安装Tomcat"></a>10.6 安装Tomcat</h3><h2 id="资料来源："><a href="#资料来源：" class="headerlink" title="资料来源："></a>资料来源：</h2><h3 id="资源："><a href="#资源：" class="headerlink" title="资源："></a>资源：</h3><ul>
+<h3 id="10-6-安装Tomcat"><a href="#10-6-安装Tomcat" class="headerlink" title="10.6 安装Tomcat"></a>10.6 安装Tomcat</h3><pre><code class="shell">tar -zxf Tomcat压缩包.tar.gz        #解压
+rm -rf ./*.gz                                     #删除当前目录下所有的.gz压缩包
+cd Tomcat目录                                    #进入Tomcat目录
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630170816.png" alt=""></p>
+<pre><code class="shell">cd bin/                #进入bin目录下
+./startup.sh    #运行程序
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630171232.png" alt=""></p>
+<pre><code class="shell">ps -ef | grep 服务                     #查看服务进程
+netstat -naop | grep 端口号    #查看端口正在被谁占用
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630172013.png" alt=""></p>
+<pre><code class="shell">kill -9 进程号                            #杀死进程
+curl http://localhost:8080    #访问本地8080端口
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630172604.png" alt=""></p>
+<pre><code class="shell">tail -f catalina.out        #查看日志
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630205809.png" alt=""></p>
+<p>此时服务已启动，但是只能在虚拟机中访问，Windows中无法访问，因为存在防火墙</p>
+<p>有两种方式可以访问，一种是关闭防火墙，但会导致任何人都可以访问</p>
+<p>另一种是配置开放的端口号（如果要配置开放某个端口号，必须在ssh.xml中开放）</p>
+<pre><code class="shell">vim /usr/lib/firewalld/services/ssh.xml        #进入ssh.xml配置端口号
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630211647.png" alt=""></p>
+<p>在ssh.xml文件中添加下面的内容</p>
+<pre><code class="xml">&lt;!--配置开发8080端口号--&gt;
+&lt;port protocol="top" port="8080"/&gt;
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630212027.png" alt=""></p>
+<p><code>esc</code>，<code>:wq</code>：保存退出</p>
+<pre><code class="shell">systemctl restart firewalld        #重启防火墙
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630212528.png" alt=""></p>
+<p><strong>注意：在Windows中访问tomcat要写<code>虚拟机的IP:8080</code></strong></p>
+<h3 id="10-7-安装MySQL"><a href="#10-7-安装MySQL" class="headerlink" title="10.7 安装MySQL"></a>10.7 安装MySQL</h3><h4 id="10-7-1-安装mysql的yum存储库"><a href="#10-7-1-安装mysql的yum存储库" class="headerlink" title="10.7.1 安装mysql的yum存储库"></a>10.7.1 安装mysql的yum存储库</h4><p>使用wget下载即可，不过需要先下载wget，再通过wget下载rpm包</p>
+<pre><code class="sh">yum -y install wget        #首先通过yum下载wget命令
+wget https:..dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+#通过wget下载MySQL数据库
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630215402.png" alt=""></p>
+<h4 id="10-7-2-安装下载好的rpm包"><a href="#10-7-2-安装下载好的rpm包" class="headerlink" title="10.7.2 安装下载好的rpm包"></a>10.7.2 安装下载好的rpm包</h4><p>使用rpm包的命令直接安装</p>
+<pre><code class="shell">rpm -Uvh mysql80-community-release-el7-3.noarch.rpm    #安装rpm包
+rpm -qa | grep 内容                                                                #查看rpm包
+rpm -e --nodeps rpm名称                                                        #卸载rpm（不需要指定当前命令...）
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630221253.png" alt=""></p>
+<p>安装完成之后会在/etc/yum.repos.d/目录下新增<code>mysql-community.repo</code>、<code>mysql-community-source.repo</code>两个yum源文件</p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630221603.png" alt=""></p>
+<h4 id="10-7-3-选择发行版本"><a href="#10-7-3-选择发行版本" class="headerlink" title="10.7.3 选择发行版本"></a>10.7.3 选择发行版本</h4><p>由于默认安装8.0版本的MySQL，我们需要修改为5.7版本</p>
+<pre><code class="shell">yum repolist all | grep mysql        #查看一下默认选择的发行版本
+#通过编辑/etc/yum.repos.d/mysql-community.repo文件，去修改发行版本
+#将80的enabled更改为0，将67的enabled更改为1，保存即可
+#再次通过yum repolist all | grep mysql查看
+#效果如下
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630214104.png" alt=""></p>
+<h4 id="10-7-4-安装MySQL社区版服务"><a href="#10-7-4-安装MySQL社区版服务" class="headerlink" title="10.7.4 安装MySQL社区版服务"></a>10.7.4 安装MySQL社区版服务</h4><p>开始安装，这一步需要下载一段时间，下载失败就是网络较差了，学会科学上网</p>
+<pre><code class="shell">yum -y install mysql-community-server
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630221853.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630225030.png" alt=""></p>
+<h4 id="10-7-5-检查MySQL是否安装成功"><a href="#10-7-5-检查MySQL是否安装成功" class="headerlink" title="10.7.5 检查MySQL是否安装成功"></a>10.7.5 检查MySQL是否安装成功</h4><pre><code class="shell">rpm -qa | grep mysql
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630222234.png" alt=""></p>
+<h4 id="10-7-6-启动MySQL服务，并连接"><a href="#10-7-6-启动MySQL服务，并连接" class="headerlink" title="10.7.6 启动MySQL服务，并连接"></a>10.7.6 启动MySQL服务，并连接</h4><p>安装成功后手动启动，并使用日志中的密码登录，而且第一个操作必须是修改密码，后续才可正常操作</p>
+<pre><code class="shell">systerctl start mysqld.server                                    #启动MySQL服务
+systerctl restart mysqld.server                                #重启MySQL服务
+systerctl stop mysqld.server                                    #停止MySQL服务
+systerctl enable mysqld.server                                #设置MySQL开机启动
+mysql&gt; flush privileges;--                                        #刷新MySQL的系统权限
+</code></pre>
+<pre><code class="shell">grep 'temporary password' /var/log/mysqld.log        #查看初始化密码
+mysql -u root -p                                                            #连接MySQL服务
+Enter password:随机密码
+mysql&gt; ALTER USER 'root@localhost' IDENTIFIED BY 'P@aaw0rd';    #修改密码
+#要求密码必须携带：大写字母，小写字母，数字，特殊符号
+</code></pre>
+<h4 id="10-7-7-设置远程主机登录"><a href="#10-7-7-设置远程主机登录" class="headerlink" title="10.7.7 设置远程主机登录"></a>10.7.7 设置远程主机登录</h4><p>其他机器连接本地MySQL</p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630224914.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630225151.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630223539.png" alt=""></p>
+<pre><code class="sql">mysql&gt; GRANT ALL PRIVILEGES ON *.* TO root@"%" IDENTIFIED BY "P@aaw0rd" WITH GRANT OPTION;
+mysql&gt; FLUSH PRIVILEGES;
+</code></pre>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630230129.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630230228.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630230552.png" alt=""></p>
+<p><strong>注意：端口号需要在防火墙中添加</strong></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630230728.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630230825.png" alt=""></p>
+<ol>
+<li>在Windows中修改项目的配置文件</li>
+</ol>
+<ul>
+<li>修改log4j的输出级别是ERROR</li>
+<li>修改数据库连接数据库</li>
+</ul>
+<ol start="2">
+<li><p>利用Maven打成war包</p>
+</li>
+<li><p>利用ftp把war包上传到tomcat/webapps目录下面</p>
+</li>
+</ol>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630231239.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630231409.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630231451.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630231533.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630231621.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630231655.png" alt=""></p>
+<ol start="4">
+<li>启动tomcat</li>
+</ol>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630231908.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630232007.png" alt=""></p>
+<p><img data-action="zoom" src="https://gitee.com/lee-hehe/Figurebed/raw/master/Linux//20200630232115.png" alt=""></p>
+<h2 id="资料来源："><a href="#资料来源：" class="headerlink" title="资料来源："></a>资料来源：</h2><h3 id="资源："><a href="#资源：" class="headerlink" title="资源："></a>资源：</h3><ul>
 <li><a href="https://www.kernel.org/" target="_blank" rel="noopener">Linux的内核版本官网</a></li>
 <li><a href="https://pan.baidu.com/s/1ynMaUqtIzdfQt9d138OndQ" target="_blank" rel="noopener">VMware百度云</a>：提取码fnw8</li>
 <li><a href="https://www.centos.org/download/" target="_blank" rel="noopener">CentOS Download</a></li>
